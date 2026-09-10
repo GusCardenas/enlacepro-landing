@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="EnlacePro identifica activos mediante QR y concentra su documentación, vencimientos, intervenciones, solicitudes e historial operacional.">
+    <meta name="theme-color" content="#0A2037">
+    <title>EnlacePro · La historia de tus activos, conectada y trazable</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a class="brand" href="#inicio" aria-label="EnlacePro, ir al inicio">
+                <span class="brand-mark" aria-hidden="true">
+                    <span class="brand-mark__line brand-mark__line--top"></span>
+                    <span class="brand-mark__line brand-mark__line--bottom"></span>
+                    <span class="brand-mark__node brand-mark__node--left"></span>
+                    <span class="brand-mark__node brand-mark__node--top"></span>
+                    <span class="brand-mark__node brand-mark__node--bottom"></span>
+                </span>
+                <span class="brand-copy">
+                    <strong>EnlacePro</strong>
+                    <small>Operación · Trazabilidad · Inteligencia</small>
+                </span>
+            </a>
+
+            <nav class="site-nav" aria-label="Navegación principal">
+                <a href="#producto">Producto</a>
+                <a href="#como-funciona">Cómo funciona</a>
+                <a href="#para-quien">Para quién</a>
+                <a href="#beneficios">Beneficios</a>
+                <a href="#preguntas">Preguntas</a>
+            </nav>
+
+            <div class="site-header__actions">
+                <a class="nav-login" href="#">Ingresar</a>
+                <a class="btn btn-primary btn-sm" href="#demo">Solicitar demo</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="container hero__grid">
+                <div class="hero__copy">
+                    <div class="eyebrow eyebrow--light"><span class="eyebrow-dot"></span> Control operacional de activos físicos</div>
+                    <h1>Cada activo tiene una historia. <span>EnlacePro evita que se pierda.</span></h1>
+                    <p>Identifica tus activos mediante QR y mantén en un solo lugar su propiedad, documentación, vencimientos, intervenciones, solicitudes e historial.</p>
+
+                    <div class="button-row">
+                        <a class="btn btn-accent" href="#demo">Solicitar una demo</a>
+                        <a class="btn btn-ghost-light" href="#como-funciona">Ver cómo funciona <span aria-hidden="true">→</span></a>
+                    </div>
+
+                    <div class="hero-proof" aria-label="Características destacadas">
+                        <span><i></i> Identificación mediante QR</span>
+                        <span><i></i> Historial trazable</span>
+                        <span><i></i> Documentos y alertas</span>
+                    </div>
+                </div>
+
+                <div class="asset-window" aria-label="Vista conceptual de una ficha de activo EnlacePro">
+                    <div class="asset-window__bar">
+                        <div class="window-dots"><span></span><span></span><span></span></div>
+                        <strong>Ficha de activo</strong>
+                        <span class="window-code">ENP-00086</span>
+                    </div>
+
+                    <div class="asset-window__body">
+                        <aside class="product-sidebar" aria-hidden="true">
+                            <div class="product-sidebar__logo">EP</div>
+                            <span class="product-sidebar__item is-active"></span>
+                            <span class="product-sidebar__item"></span>
+                            <span class="product-sidebar__item"></span>
+                            <span class="product-sidebar__item"></span>
+                        </aside>
+
+                        <div class="product-content">
+                            <div class="product-content__top">
+                                <div>
+                                    <span class="micro-label">ACTIVO · GENERACIÓN</span>
+                                    <h2>Generador Industrial 250 kVA</h2>
+                                </div>
+                                <span class="status status-success"><i></i> Operativo</span>
+                            </div>
+
+                            <div class="asset-meta">
+                                <div><span>Propietario</span><strong>Constructora Norte SpA</strong></div>
+                                <div><span>Gestionado por</span><strong>Servicio Técnico Delta</strong></div>
+                                <div><span>Próximo vencimiento</span><strong>21 oct 2026</strong></div>
+                            </div>
+
+                            <div class="asset-panel">
+                                <div class="asset-panel__header">
+                                    <strong>Historial reciente</strong>
+                                    <span>Ver trazabilidad</span>
+                                </div>
+                                <div class="timeline-row">
+                                    <span class="timeline-node"></span>
+                                    <div><strong>Mantención preventiva</strong><small>08 sep · Técnico autorizado</small></div>
+                                    <em>Completada</em>
+                                </div>
+                                <div class="timeline-row">
+                                    <span class="timeline-node timeline-node--cyan"></span>
+                                    <div><strong>Certificado actualizado</strong><small>03 sep · Documentación</small></div>
+                                    <em>Registrado</em>
+                                </div>
+                                <div class="timeline-row">
+                                    <span class="timeline-node"></span>
+                                    <div><strong>Solicitud recibida por QR</strong><small>28 ago · Cliente final</small></div>
+                                    <em>Atendida</em>
+                                </div>
+                            </div>
+
+                            <div class="asset-window__footer">
+                                <div class="qr-placeholder" aria-label="QR conceptual"><span>QR</span></div>
+                                <div><span>Identificador permanente</span><strong>ENP-00086</strong></div>
+                                <span class="public-badge">Consulta pública activa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section problem" id="problema">
+            <div class="container">
+                <div class="section-heading section-heading--center">
+                    <div class="eyebrow"><span class="eyebrow-dot"></span> El problema</div>
+                    <h2>La información existe. El problema es que está repartida.</h2>
+                    <p>Cuando la historia de un activo vive entre planillas, correos, carpetas y personas, la empresa termina operando de memoria.</p>
+                </div>
+
+                <div class="fragmentation-grid">
+                    <div class="fragmentation-map" aria-label="Información dispersa alrededor de un activo">
+                        <div class="fragment-node fragment-node--excel"><strong>Excel</strong><span>Inventario y fechas</span></div>
+                        <div class="fragment-node fragment-node--mail"><strong>Correos</strong><span>Solicitudes y acuerdos</span></div>
+                        <div class="fragment-node fragment-node--files"><strong>Carpetas</strong><span>Certificados y respaldos</span></div>
+                        <div class="fragment-node fragment-node--people"><strong>Personas</strong><span>Lo que realmente ocurrió</span></div>
+                        <div class="fragment-core">
+                            <span>ACTIVO</span>
+                            <strong>¿Cuál es su estado real?</strong>
+                        </div>
+                    </div>
+
+                    <div class="problem-copy">
+                        <span class="section-index">01</span>
+                        <h3>El conocimiento queda en las personas, no en la organización.</h3>
+                        <p>La empresa no sabe con certeza qué se hizo, cuándo ocurrió, quién intervino, qué vence, qué evidencia existe o cuánto esfuerzo se ha invertido en cada equipo.</p>
+                        <p>Cuando cambia el técnico, el administrativo o el proveedor, una parte de esa historia desaparece con él.</p>
+                        <div class="callout">
+                            <strong>El problema no es que falte información.</strong>
+                            <span>El problema es no tenerla disponible cuando hay que decidir.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-dark" id="impacto">
+            <div class="container">
+                <div class="section-heading section-heading--split section-heading--inverse">
+                    <div>
+                        <div class="eyebrow eyebrow--light"><span class="eyebrow-dot"></span> Impacto operacional</div>
+                        <h2>No saber qué está pasando con un activo tiene un costo.</h2>
+                    </div>
+                    <p>No son pérdidas técnicas. Son pérdidas provocadas por información que existía, pero no estaba disponible a tiempo.</p>
+                </div>
+
+                <div class="impact-grid">
+                    <article class="impact-card"><span>01</span><h3>Operación detenida</h3><p>Un vehículo o equipo queda fuera de operación porque un documento venció sin que nadie lo detectara.</p></article>
+                    <article class="impact-card"><span>02</span><h3>Evidencia ausente</h3><p>Una auditoría, fiscalización o cliente pide respaldo y el registro está disperso o depende de una persona.</p></article>
+                    <article class="impact-card"><span>03</span><h3>Ingresos que se pierden</h3><p>Un contrato de mantención no se renueva porque nadie vio el vencimiento o perdió de vista la base instalada.</p></article>
+                    <article class="impact-card"><span>04</span><h3>Decisiones tardías</h3><p>Una máquina sigue acumulando reparaciones porque nadie tiene a mano su historia completa para evaluar reemplazo.</p></article>
+                    <article class="impact-card"><span>05</span><h3>Horas desperdiciadas</h3><p>Administración y operaciones dedican tiempo a buscar documentos, correos y registros repartidos entre distintas fuentes.</p></article>
+                    <article class="impact-card impact-card--accent"><span>06</span><h3>Memoria organizacional</h3><p>Cuando alguien se va, la empresa no debería perder con esa persona el conocimiento acumulado de sus activos.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section identity" id="producto">
+            <div class="container identity__grid">
+                <div class="identity__copy">
+                    <span class="section-index">02</span>
+                    <div class="eyebrow"><span class="eyebrow-dot"></span> El producto</div>
+                    <h2>Una identidad digital para cada activo.</h2>
+                    <p class="lead-copy">EnlacePro asigna a cada activo una identidad permanente y concentra alrededor de ella toda la información necesaria para operarlo, mantenerlo y justificar lo que ha ocurrido.</p>
+
+                    <div class="identity-list">
+                        <div><i></i><span><strong>Quién es.</strong> Identificador, código interno, tipo, estado y características.</span></div>
+                        <div><i></i><span><strong>Quién responde por él.</strong> Propietario, empresa gestora y responsables.</span></div>
+                        <div><i></i><span><strong>Qué lo respalda.</strong> Documentos, certificados, evidencias y vencimientos.</span></div>
+                        <div><i></i><span><strong>Qué le ha ocurrido.</strong> Intervenciones, solicitudes, cambios y eventos.</span></div>
+                    </div>
+                </div>
+
+                <figure class="generic-image-card">
+                    <img src="https://placehold.co/960x680/F0FAFD/0A2037?text=Activo+identificado+con+QR" alt="Imagen genérica de un activo identificado mediante QR">
+                    <figcaption><span class="eyebrow-dot"></span> Imagen referencial · reemplazar por fotografía de producto</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="section section-soft" id="como-funciona">
+            <div class="container">
+                <div class="section-heading section-heading--center">
+                    <div class="eyebrow"><span class="eyebrow-dot"></span> Cómo funciona</div>
+                    <h2>Del QR a una historia operacional completa.</h2>
+                    <p>No necesitas sensorizar cada equipo. EnlacePro organiza la capa de identidad, información, evidencia y trazabilidad que hoy está dispersa.</p>
+                </div>
+
+                <div class="process-flow">
+                    <article class="process-step"><span class="process-number">01</span><div class="process-icon">A</div><h3>Registra el activo</h3><p>Crea su ficha, asigna responsable, propietario, tipo y datos operacionales.</p></article>
+                    <i aria-hidden="true">→</i>
+                    <article class="process-step"><span class="process-number">02</span><div class="process-icon">QR</div><h3>Identifícalo</h3><p>Genera un identificador permanente y una etiqueta QR asociada al activo físico.</p></article>
+                    <i aria-hidden="true">→</i>
+                    <article class="process-step"><span class="process-number">03</span><div class="process-icon">DOC</div><h3>Documenta y controla</h3><p>Centraliza documentos, certificados, fechas relevantes, alertas y vencimientos.</p></article>
+                    <i aria-hidden="true">→</i>
+                    <article class="process-step"><span class="process-number">04</span><div class="process-icon">EV</div><h3>Registra lo que ocurre</h3><p>Mantenciones, inspecciones, solicitudes y otros eventos quedan asociados al activo.</p></article>
+                    <i aria-hidden="true">→</i>
+                    <article class="process-step"><span class="process-number">05</span><div class="process-icon">H</div><h3>Consulta su historia</h3><p>Obtén una visión consolidada para responder, demostrar y tomar mejores decisiones.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section capabilities">
+            <div class="container">
+                <div class="section-heading section-heading--split">
+                    <div>
+                        <div class="eyebrow"><span class="eyebrow-dot"></span> Capacidades V1.0</div>
+                        <h2>Todo lo importante alrededor del activo, conectado.</h2>
+                    </div>
+                    <p>La primera versión de EnlacePro está concentrada en resolver control, continuidad y trazabilidad sin agregar complejidad innecesaria.</p>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card"><span class="feature-kicker">IDENTIFICAR</span><h3>QR e identidad permanente</h3><p>Cada activo dispone de un código único que permanece vinculado a su historia a lo largo del tiempo.</p><span class="feature-link">Activo físico → identidad digital</span></article>
+                    <article class="feature-card"><span class="feature-kicker">CONTROLAR</span><h3>Propiedad, gestión y estado</h3><p>Registra quién es propietario, quién lo gestiona, quién responde y cuál es su situación operacional.</p><span class="feature-link">Responsabilidad visible</span></article>
+                    <article class="feature-card"><span class="feature-kicker">DOCUMENTAR</span><h3>Documentos y vencimientos</h3><p>Asocia certificados, respaldos y documentación directamente al activo y controla su vigencia.</p><span class="feature-link">Evidencia disponible</span></article>
+                    <article class="feature-card"><span class="feature-kicker">ANTICIPAR</span><h3>Alertas operacionales</h3><p>Detecta vencimientos y situaciones que requieren atención antes de que se conviertan en un problema.</p><span class="feature-link">Actuar antes</span></article>
+                    <article class="feature-card"><span class="feature-kicker">TRAZAR</span><h3>Intervenciones y eventos</h3><p>Registra mantenciones, inspecciones, reparaciones, cambios y hechos relevantes en una línea histórica.</p><span class="feature-link">Cada acción deja rastro</span></article>
+                    <article class="feature-card"><span class="feature-kicker">CONECTAR</span><h3>Consulta pública y solicitudes</h3><p>Define qué información puede consultar un tercero mediante QR y permite recibir solicitudes vinculadas al activo.</p><span class="feature-link">Del activo a la empresa</span></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section ownership">
+            <div class="container ownership__grid">
+                <div class="ownership__visual">
+                    <div class="owner-card owner-card--origin"><span>Empresa gestora</span><strong>Servicio Técnico Delta</strong><small>Mantiene la relación operacional</small></div>
+                    <div class="asset-transfer"><span class="asset-transfer__qr">QR</span><strong>Generador 250 kVA</strong><small>ENP-00086</small></div>
+                    <div class="owner-card owner-card--destination"><span>Nuevo propietario</span><strong>Constructora Norte SpA</strong><small>Recibe el activo</small></div>
+                    <div class="history-line"><span></span><strong>La historia continúa</strong><span></span></div>
+                </div>
+
+                <div class="ownership__copy">
+                    <span class="section-index">03</span>
+                    <div class="eyebrow"><span class="eyebrow-dot"></span> Continuidad del activo</div>
+                    <h2>El activo puede cambiar de dueño. Su historia permanece.</h2>
+                    <p>Una empresa puede vender un equipo a un tercero y continuar gestionándolo como parte de su base instalada. El cambio de propietario no rompe la trazabilidad ni elimina la relación de servicio.</p>
+                    <p>Esto permite conservar documentación, intervenciones y contexto aunque el activo cambie de ubicación, cliente o responsable.</p>
+                    <div class="callout callout--cyan"><strong>Especialmente útil para empresas que venden y mantienen.</strong><span>La base instalada deja de depender de planillas comerciales o de la memoria del técnico.</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-dark qr-section">
+            <div class="container qr-section__grid">
+                <div class="qr-section__copy">
+                    <div class="eyebrow eyebrow--light"><span class="eyebrow-dot"></span> El activo como punto de contacto</div>
+                    <h2>Un QR para consultar, informar y actuar.</h2>
+                    <p>La empresa decide qué información puede exponer públicamente. Una persona frente al activo puede consultar lo permitido y, cuando corresponda, levantar una solicitud que queda vinculada a ese equipo.</p>
+                    <div class="dark-list">
+                        <div><i></i><span>Consulta pública controlada.</span></div>
+                        <div><i></i><span>Documentación pública seleccionada.</span></div>
+                        <div><i></i><span>Solicitudes asociadas directamente al activo.</span></div>
+                        <div><i></i><span>Registro de interacción para mantener contexto.</span></div>
+                    </div>
+                </div>
+
+                <div class="public-preview">
+                    <div class="phone-frame">
+                        <div class="phone-bar"><span></span><strong>enlacepro.cl/v/ENP-00086</strong></div>
+                        <div class="phone-body">
+                            <span class="public-label">ACTIVO VERIFICADO</span>
+                            <div class="public-icon">EP</div>
+                            <h3>Generador Industrial 250 kVA</h3>
+                            <span class="status status-success"><i></i> Operativo</span>
+                            <dl>
+                                <div><dt>Código</dt><dd>ENP-00086</dd></div>
+                                <div><dt>Empresa responsable</dt><dd>Servicio Técnico Delta</dd></div>
+                                <div><dt>Última actualización</dt><dd>08 sep 2026</dd></div>
+                            </dl>
+                            <button type="button" class="btn btn-primary btn-block">Enviar una solicitud</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section personas" id="para-quien">
+            <div class="container">
+                <div class="section-heading section-heading--center">
+                    <div class="eyebrow"><span class="eyebrow-dot"></span> Para quién</div>
+                    <h2>Si respondes por activos, necesitas conocer su historia.</h2>
+                    <p>Tres operaciones distintas comparten el mismo problema: el activo tiene historia y nadie la tiene completa.</p>
+                </div>
+
+                <div class="persona-grid">
+                    <article class="persona-card">
+                        <span class="persona-number">01</span>
+                        <div class="persona-image"><img src="https://placehold.co/720x440/F3F4F6/0A2037?text=Planta+%C2%B7+Flota+%C2%B7+Maquinaria" alt="Imagen genérica de planta, flota o maquinaria"></div>
+                        <div class="persona-card__body"><span class="persona-role">DUEÑO DE ACTIVOS</span><h3>Controla equipos propios.</h3><p>Necesita saber qué se le hizo a cada máquina, cuándo ocurrió, quién fue responsable y qué evidencia existe.</p><strong>Busca control operacional y mejores decisiones.</strong></div>
+                    </article>
+                    <article class="persona-card persona-card--accent">
+                        <span class="persona-number">02</span>
+                        <div class="persona-image"><img src="https://placehold.co/720x440/F0FAFD/0A2037?text=Venta+%2B+Mantenci%C3%B3n" alt="Imagen genérica de empresa que vende y mantiene equipos"></div>
+                        <div class="persona-card__body"><span class="persona-role">VENDEDOR QUE MANTIENE</span><h3>Controla su base instalada.</h3><p>El equipo está en casa del cliente, pero la relación comercial y técnica continúa durante años.</p><strong>Busca continuidad de servicio e ingresos recurrentes.</strong></div>
+                    </article>
+                    <article class="persona-card">
+                        <span class="persona-number">03</span>
+                        <div class="persona-image"><img src="https://placehold.co/720x440/F3F4F6/0A2037?text=Servicio+t%C3%A9cnico" alt="Imagen genérica de servicio técnico en terreno"></div>
+                        <div class="persona-card__body"><span class="persona-role">PRESTADOR TÉCNICO</span><h3>Responde por equipos ajenos.</h3><p>No es dueño del activo, pero necesita demostrar exactamente qué hizo, cuándo y bajo qué contexto.</p><strong>Busca evidencia y trazabilidad independiente del técnico.</strong></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-soft" id="beneficios">
+            <div class="container benefits__grid">
+                <div class="benefits__copy">
+                    <span class="section-index">04</span>
+                    <div class="eyebrow"><span class="eyebrow-dot"></span> Resultado</div>
+                    <h2>Menos memoria. Más control.</h2>
+                    <p>EnlacePro no reemplaza el conocimiento técnico. Evita que ese conocimiento quede atrapado en personas, correos o archivos aislados.</p>
+                </div>
+
+                <div class="benefit-list">
+                    <article><span>01</span><div><h3>Anticipa vencimientos</h3><p>Detecta documentación y fechas relevantes antes de que afecten la operación.</p></div></article>
+                    <article><span>02</span><div><h3>Encuentra evidencia</h3><p>Accede a documentos e historial desde la ficha del activo, sin perseguir correos o carpetas.</p></div></article>
+                    <article><span>03</span><div><h3>Conserva conocimiento</h3><p>La historia permanece en la organización aunque cambien técnicos, administrativos o proveedores.</p></div></article>
+                    <article><span>04</span><div><h3>Controla la base instalada</h3><p>Mantén visibilidad de activos propios o de terceros que continúan bajo tu responsabilidad operacional.</p></div></article>
+                    <article><span>05</span><div><h3>Decide con contexto</h3><p>Consulta qué ha ocurrido con un activo antes de mantener, reparar, renovar o reemplazar.</p></div></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section fit-section">
+            <div class="container fit-card">
+                <div class="fit-card__copy">
+                    <div class="eyebrow"><span class="eyebrow-dot"></span> Un espacio entre Excel e IoT</div>
+                    <h2>Control de activos sin convertir cada equipo en un proyecto tecnológico.</h2>
+                    <p>EnlacePro está pensado para empresas medianas y pymes cuya operación depende de activos físicos, pero donde instalar sensores, gateways o una plataforma IoT completa no se justifica.</p>
+                    <div class="fit-tags"><span>50–1.000 activos</span><span>Operación física</span><span>Documentación relevante</span><span>Historial necesario</span></div>
+                </div>
+                <div class="fit-spectrum" aria-label="Posicionamiento de EnlacePro entre planillas e IoT">
+                    <div class="spectrum-item"><span>Excel + correos</span><small>Información dispersa</small></div>
+                    <div class="spectrum-line"><i></i><strong>EnlacePro</strong><i></i></div>
+                    <div class="spectrum-item spectrum-item--right"><span>IoT industrial</span><small>Sensorización y telemetría</small></div>
+                    <p>Identidad · documentación · trazabilidad · interacción</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section product-showcase">
+            <div class="container">
+                <div class="section-heading section-heading--center">
+                    <div class="eyebrow"><span class="eyebrow-dot"></span> Producto real</div>
+                    <h2>La historia completa de un activo, en una sola vista.</h2>
+                    <p>Esta versión utiliza mockups conceptuales. En la siguiente iteración los reemplazaremos por capturas reales del producto.</p>
+                </div>
+
+                <div class="showcase-grid">
+                    <article class="showcase-card showcase-card--large">
+                        <div class="showcase-placeholder"><span>01</span><strong>Ficha de activo</strong><small>Estado, propietario, responsable, documentación, identificador e historial.</small></div>
+                    </article>
+                    <article class="showcase-card">
+                        <div class="showcase-placeholder showcase-placeholder--cyan"><span>02</span><strong>Documentos y alertas</strong><small>Vigencias, certificados y próximas fechas críticas.</small></div>
+                    </article>
+                    <article class="showcase-card">
+                        <div class="showcase-placeholder"><span>03</span><strong>Historial de eventos</strong><small>Intervenciones, solicitudes y cambios ordenados cronológicamente.</small></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-soft faq-section" id="preguntas">
+            <div class="container faq-grid">
+                <div class="faq-copy">
+                    <div class="eyebrow"><span class="eyebrow-dot"></span> Preguntas frecuentes</div>
+                    <h2>Lo esencial antes de evaluar EnlacePro.</h2>
+                    <p>La V1.0 está deliberadamente enfocada en identificación, documentación, trazabilidad e interacción alrededor de activos físicos.</p>
+                    <a class="btn btn-secondary" href="#demo">Tengo otra pregunta</a>
+                </div>
+
+                <div class="faq-list">
+                    <details open><summary>¿Necesito instalar sensores en mis equipos?<span>+</span></summary><p>No. EnlacePro no depende de IoT ni de telemetría. El activo se identifica mediante QR y su información operacional se gestiona dentro de la plataforma.</p></details>
+                    <details><summary>¿Qué pasa si vendo o transfiero un activo?<span>+</span></summary><p>Puedes registrar el cambio de propietario sin perder la historia del activo. La empresa que lo gestiona puede mantener la relación operacional cuando corresponda.</p></details>
+                    <details><summary>¿Quién puede consultar el QR?<span>+</span></summary><p>La empresa controla qué información es pública. El QR puede exponer una vista limitada sin revelar campos internos o sensibles.</p></details>
+                    <details><summary>¿Puedo administrar activos que pertenecen a mis clientes?<span>+</span></summary><p>Sí. Es uno de los escenarios centrales de EnlacePro: empresas que venden, mantienen o prestan servicio sobre activos instalados en terceros.</p></details>
+                    <details><summary>¿Qué ocurre si cambia el técnico responsable?<span>+</span></summary><p>La historia registrada permanece asociada al activo. El conocimiento deja de depender de la persona que actualmente atiende el equipo.</p></details>
+                    <details><summary>¿Puedo controlar documentos y vencimientos?<span>+</span></summary><p>Sí. La documentación puede asociarse al activo y utilizarse para controlar vigencias y generar alertas sobre fechas relevantes.</p></details>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact-section" id="demo">
+            <div class="container contact-card">
+                <div class="contact-copy">
+                    <div class="eyebrow eyebrow--light"><span class="eyebrow-dot"></span> Solicita una demostración</div>
+                    <h2>¿Cuántos activos dependen hoy de una planilla?</h2>
+                    <p>Muéstranos cómo administras actualmente tus activos y revisemos si EnlacePro puede ayudarte a mantenerlos identificados, documentados y trazables.</p>
+                    <div class="contact-points">
+                        <span><i></i> Conversación enfocada en tu operación</span>
+                        <span><i></i> Sin compromiso</span>
+                        <span><i></i> Evaluación de encaje</span>
+                    </div>
+                </div>
+
+                <form class="lead-form" action="#" method="post">
+                    <div class="form-row">
+                        <label>Nombre y apellido<input type="text" name="name" placeholder="Tu nombre" required></label>
+                        <label>Empresa<input type="text" name="company" placeholder="Nombre de empresa" required></label>
+                    </div>
+                    <label>Correo corporativo<input type="email" name="email" placeholder="nombre@empresa.cl" required></label>
+                    <div class="form-row">
+                        <label>Teléfono <span>Opcional</span><input type="tel" name="phone" placeholder="+56 9 ..."></label>
+                        <label>Cantidad aproximada de activos<select name="assets" required><option value="">Seleccionar</option><option>Menos de 50</option><option>50–100</option><option>101–250</option><option>251–500</option><option>501–1.000</option><option>Más de 1.000</option></select></label>
+                    </div>
+                    <label>¿Qué necesitas controlar?<textarea name="message" rows="4" placeholder="Cuéntanos brevemente cómo gestionan hoy sus activos..."></textarea></label>
+                    <button class="btn btn-accent btn-block" type="submit">Solicitar demo</button>
+                    <small>Al enviar tus datos aceptas ser contactado por EnlacePro respecto de esta solicitud.</small>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container site-footer__top">
+            <div>
+                <a class="brand brand--inverse" href="#inicio" aria-label="EnlacePro">
+                    <span class="brand-mark" aria-hidden="true">
+                        <span class="brand-mark__line brand-mark__line--top"></span>
+                        <span class="brand-mark__line brand-mark__line--bottom"></span>
+                        <span class="brand-mark__node brand-mark__node--left"></span>
+                        <span class="brand-mark__node brand-mark__node--top"></span>
+                        <span class="brand-mark__node brand-mark__node--bottom"></span>
+                    </span>
+                    <span class="brand-copy"><strong>EnlacePro</strong><small>Operación · Trazabilidad · Inteligencia</small></span>
+                </a>
+                <p>Identidad, documentación y trazabilidad para activos físicos.</p>
+            </div>
+            <div class="footer-links"><strong>Producto</strong><a href="#producto">Qué es EnlacePro</a><a href="#como-funciona">Cómo funciona</a><a href="#para-quien">Para quién</a></div>
+            <div class="footer-links"><strong>Empresa</strong><a href="#demo">Solicitar demo</a><a href="#preguntas">Preguntas frecuentes</a><a href="#">Ingresar</a></div>
+            <div class="footer-links"><strong>Legal</strong><a href="#">Privacidad</a><a href="#">Términos de uso</a><a href="mailto:contacto@enlacepro.cl">contacto@enlacepro.cl</a></div>
+        </div>
+        <div class="container site-footer__bottom"><span>© 2026 EnlacePro. Todos los derechos reservados.</span><span>Operación · Trazabilidad · Inteligencia</span></div>
+    </footer>
+</body>
+</html>
