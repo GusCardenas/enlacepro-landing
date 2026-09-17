@@ -216,6 +216,41 @@
     line-height: 1.55;
 }
 
+/* Volver arriba: usa el enlace existente del logo del footer hacia #inicio. */
+.site-footer .brand::after {
+    content: "↑  Arriba";
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 90;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0 16px;
+    border: 1px solid rgba(7,41,94,.12);
+    border-radius: 999px;
+    color: var(--white);
+    background: rgba(7,41,94,.94);
+    box-shadow: 0 10px 28px rgba(7,41,94,.22);
+    backdrop-filter: blur(10px);
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+    transition: transform .16s ease, background-color .16s ease, box-shadow .16s ease;
+}
+.site-footer .brand:hover::after {
+    background: var(--brand-navy-900);
+    box-shadow: 0 12px 32px rgba(7,41,94,.28);
+    transform: translateY(-2px);
+}
+.site-footer .brand:focus-visible::after {
+    outline: 3px solid rgba(0,184,240,.32);
+    outline-offset: 3px;
+}
+
 @media (max-width: 1080px) {
     .security-grid { grid-template-columns: 1fr; gap: 42px; }
     .security-copy { max-width: 760px; }
@@ -230,10 +265,19 @@
     .security-card h3 { font-size: 20px; }
     .security-copy > p, .plans-intro p { font-size: 17px; }
     .hero-proof::after { margin-top: 12px; font-size: 13px; }
+    .site-footer .brand::after { right: 18px; bottom: 18px; }
 }
 
 @media (max-width: 480px) {
     .security-card { grid-template-columns: 1fr; }
     .plan-card { padding: 25px 20px; }
     .hero .button-row .btn-accent { width: 100%; }
+    .site-footer .brand::after {
+        content: "↑";
+        width: 46px;
+        min-height: 46px;
+        padding: 0;
+        border-radius: 50%;
+        font-size: 18px;
+    }
 }
