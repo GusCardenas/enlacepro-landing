@@ -1,9 +1,5 @@
-/* Industrial imagery overrides for the EnlacePro landing.
-   Reference image supplied by the project owner: open-pit mining operation with haul truck. */
-
-:root {
-    --industrial-reference: url("https://www.cochilco.cl/web/wp-content/uploads/2025/03/46599128875_6af6d237ec_o-2048x1365.jpg");
-}
+/* Industrial imagery — cada tarjeta muestra su propia foto real (<img>),
+   en vez del hack anterior que repetía una sola imagen de referencia vía CSS. */
 
 .generic-image-card {
     position: relative;
@@ -13,17 +9,19 @@
 .generic-image-card::before {
     content: "";
     position: absolute;
-    z-index: 0;
+    z-index: 1;
     inset: 0 0 42px;
-    background-image: linear-gradient(180deg, rgba(7,41,94,.02), rgba(7,41,94,.14)), var(--industrial-reference);
-    background-size: cover;
-    background-position: 36% 58%;
-    filter: saturate(.82) contrast(1.03);
+    background-image: linear-gradient(180deg, rgba(7,41,94,0) 55%, rgba(7,41,94,.22) 100%);
+    pointer-events: none;
 }
 .generic-image-card > img {
     position: relative;
     z-index: 0;
-    opacity: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
 }
 .generic-image-card figcaption {
     position: relative;
@@ -44,43 +42,23 @@
     aspect-ratio: 16 / 9;
     background: #dce3ea;
 }
-.persona-image::before,
 .persona-image::after {
     content: "";
     position: absolute;
     inset: 0;
-}
-.persona-image::before {
-    background-image: var(--industrial-reference);
-    background-size: cover;
-    filter: saturate(.78) contrast(1.04);
-    transition: transform .35s ease, filter .35s ease;
-}
-.persona-image::after {
     background: linear-gradient(180deg, rgba(7,41,94,0) 45%, rgba(7,41,94,.24) 100%);
 }
 .persona-image img {
     width: 100%;
     height: 100%;
-    opacity: 0;
+    object-fit: cover;
+    opacity: 1;
+    transition: transform .35s ease, filter .35s ease;
 }
-.persona-card:nth-child(1) .persona-image::before {
-    background-position: 18% 64%;
-}
-.persona-card:nth-child(2) .persona-image::before {
-    background-position: 42% 48%;
-    transform: scale(1.08);
-}
-.persona-card:nth-child(3) .persona-image::before {
-    background-position: 70% 44%;
-    transform: scale(1.12);
-}
-.persona-card:hover .persona-image::before {
+.persona-card:hover .persona-image img {
     transform: scale(1.06);
-    filter: saturate(.9) contrast(1.06);
+    filter: saturate(1.02) contrast(1.03);
 }
-.persona-card:nth-child(2):hover .persona-image::before { transform: scale(1.13); }
-.persona-card:nth-child(3):hover .persona-image::before { transform: scale(1.17); }
 
 .identity {
     position: relative;
@@ -96,13 +74,4 @@
     top: 70px;
     border-radius: 50%;
     background: rgba(0,184,240,.045);
-}
-
-@media (max-width: 760px) {
-    .generic-image-card::before {
-        inset: 0 0 42px;
-        background-position: 28% 58%;
-    }
-    .persona-card:nth-child(2) .persona-image::before { background-position: 34% 52%; }
-    .persona-card:nth-child(3) .persona-image::before { background-position: 64% 46%; }
 }
