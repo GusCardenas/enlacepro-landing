@@ -1,0 +1,208 @@
+/* Ritmo vertical y densidad para la escala tipográfica accesible */
+:root {
+    --section-space: 112px;
+    --section-space-compact: 92px;
+    --content-gap: 64px;
+}
+
+/* Lectura y cadencia general */
+.section { padding-top: var(--section-space); padding-bottom: var(--section-space); }
+.compact-impact { padding-top: var(--section-space-compact); padding-bottom: var(--section-space-compact); }
+.section-heading { margin-bottom: 50px; }
+.section-heading--center p { max-width: 720px; margin-left: auto; margin-right: auto; }
+.section-heading--split { gap: 64px; }
+.section-heading--split > p { max-width: 560px; }
+
+/* Hero */
+.hero { padding-top: 112px; padding-bottom: 118px; }
+.hero__grid { gap: 72px; }
+.hero__copy > p { margin-top: 24px; }
+.hero .button-row { margin-top: 32px; gap: 14px; }
+.hero-proof { gap: 14px 24px; margin-top: 32px; padding-top: 24px; }
+
+/* Mockup: permitir que la tipografía mayor respire */
+.asset-window__body { min-height: 468px; }
+.product-content { padding: 30px 30px 26px; }
+.product-content__top { gap: 24px; }
+.asset-meta { gap: 12px; margin: 24px 0; }
+.asset-meta div { padding: 14px; }
+.asset-panel__header { padding: 13px 15px; }
+.timeline-row { gap: 10px; padding: 12px 15px; }
+.asset-window__footer { margin-top: 18px; padding: 14px; }
+
+/* Problema */
+.fragmentation-grid { gap: 76px; }
+.problem-copy > p { margin-top: 18px; }
+.callout { margin-top: 28px; padding: 22px 24px; }
+.fragment-node { min-width: 150px; }
+
+/* Impacto */
+.compact-impact .section-heading { margin-bottom: 40px; }
+.impact-grid { gap: 20px; }
+.impact-card { min-height: 210px; padding: 30px; }
+.impact-card h3 { margin-top: 24px; }
+
+/* Identidad / transferencia / QR */
+.identity__grid,
+.ownership__grid,
+.qr-section__grid { gap: 88px; }
+.identity-list { gap: 18px; margin-top: 32px; }
+.identity-list div,
+.dark-list div { gap: 14px; }
+.generic-image-card figcaption { padding: 16px 20px; }
+
+/* Flujo */
+.process-flow { gap: 14px; }
+.process-step { min-height: 230px; padding: 26px 22px; }
+.process-icon { margin: 20px 0; }
+.process-step p { margin-top: 12px; }
+
+/* Capacidades */
+.feature-grid { gap: 20px; }
+.feature-card { min-height: 300px; padding: 30px; }
+.feature-card h3 { margin: 26px 0 14px; }
+.feature-link { margin-top: 26px; padding-top: 18px; }
+
+/* Perfiles */
+.persona-grid { gap: 22px; }
+.persona-card__body { padding: 30px; }
+.persona-card h3 { margin: 18px 0 12px; }
+.persona-card__body > strong { margin-top: 22px; padding-top: 18px; }
+
+/* Transferencia: mayor espacio para textos accesibles */
+.ownership__visual { min-height: 540px; padding: 52px; }
+.owner-card { max-width: 230px; padding: 20px; }
+.asset-transfer { width: 220px; padding: 28px 22px; }
+.asset-transfer__qr { width: 60px; height: 60px; margin-bottom: 16px; }
+
+/* QR público */
+.dark-list { gap: 17px; margin-top: 32px; }
+.qr-section .button-row { margin-top: 32px; }
+.phone-frame { width: 380px; }
+.phone-body { padding: 32px 28px; }
+.phone-body dl { margin: 26px 0; }
+.phone-body dl div { padding: 12px 0; }
+
+/* Beneficios */
+.benefits__grid { gap: 84px; }
+.benefit-list article { grid-template-columns: 46px 1fr; gap: 20px; padding: 26px 0; }
+.benefit-list > article > span { width: 42px; height: 42px; }
+
+/* Posicionamiento */
+.fit-card { gap: 76px; padding: 60px; }
+.fit-tags { gap: 10px; margin-top: 28px; }
+.fit-tags span { padding: 9px 12px; }
+.fit-spectrum { padding: 36px; }
+.spectrum-line { margin: 28px 0 18px; }
+
+/* FAQ */
+.faq-grid { gap: 88px; }
+.faq-list summary { padding: 25px 0; }
+.faq-list p { margin: -4px 42px 26px 0; }
+.faq-copy .btn { margin-top: 30px; }
+
+/* Conversión */
+.contact-section { padding-top: 96px; padding-bottom: 96px; }
+.contact-card { gap: 82px; }
+.contact-copy > p { margin-top: 24px; }
+.contact-points { gap: 14px 22px; margin-top: 32px; padding-top: 24px; }
+.lead-form { padding: 34px; }
+.form-row { gap: 16px; }
+.lead-form label { margin-bottom: 18px; }
+.lead-form input,
+.lead-form select,
+.lead-form textarea { margin-top: 8px; padding: 14px 15px; }
+.lead-form > small { margin-top: 14px; }
+
+/* Footer */
+.site-footer__top { gap: 54px; padding-top: 64px; padding-bottom: 54px; }
+.footer-links { gap: 11px; }
+.site-footer__bottom { padding-top: 22px; padding-bottom: 24px; }
+
+@media (max-width: 1080px) {
+    :root {
+        --section-space: 96px;
+        --section-space-compact: 82px;
+    }
+
+    .hero { padding-top: 92px; padding-bottom: 100px; }
+    .hero__grid { gap: 62px; }
+    .fragmentation-grid,
+    .identity__grid,
+    .ownership__grid,
+    .qr-section__grid,
+    .benefits__grid,
+    .faq-grid,
+    .contact-card { gap: 58px; }
+    .process-step { min-height: 0; }
+    .feature-card { min-height: 280px; }
+    .fit-card { padding: 48px; gap: 48px; }
+    .ownership__visual { min-height: 520px; }
+}
+
+@media (max-width: 760px) {
+    :root {
+        --section-space: 76px;
+        --section-space-compact: 68px;
+    }
+
+    .section-heading { margin-bottom: 38px; }
+    .section-heading--split { gap: 20px; }
+    .hero { padding-top: 72px; padding-bottom: 82px; }
+    .hero__grid { gap: 52px; }
+    .hero__copy > p { margin-top: 20px; }
+    .hero .button-row { margin-top: 28px; }
+    .hero-proof { margin-top: 28px; padding-top: 20px; }
+
+    .asset-window__body { min-height: 420px; }
+    .product-content { padding: 22px 18px; }
+    .asset-meta { margin: 20px 0; }
+
+    .fragmentation-grid,
+    .identity__grid,
+    .ownership__grid,
+    .qr-section__grid,
+    .benefits__grid,
+    .faq-grid,
+    .contact-card { gap: 44px; }
+
+    .impact-grid,
+    .feature-grid,
+    .persona-grid { gap: 18px; }
+    .impact-card { min-height: 0; padding: 26px; }
+    .feature-card { min-height: 0; padding: 26px; }
+    .process-step { padding: 24px; }
+    .persona-card__body { padding: 26px; }
+
+    .ownership__visual { min-height: 560px; padding: 24px; }
+    .owner-card { max-width: 195px; padding: 17px; }
+    .asset-transfer { width: 185px; padding: 22px 16px; }
+    .phone-body { padding: 28px 24px; }
+
+    .benefit-list article { gap: 16px; padding: 23px 0; }
+    .fit-card { padding: 34px 24px; gap: 38px; }
+    .fit-spectrum { padding: 28px 22px; }
+
+    .faq-list summary { padding: 22px 0; }
+    .faq-list p { margin-right: 12px; margin-bottom: 22px; }
+    .contact-section { padding-top: 76px; padding-bottom: 76px; }
+    .lead-form { padding: 24px; }
+
+    .site-footer__top { padding-top: 52px; padding-bottom: 44px; }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --section-space: 66px;
+        --section-space-compact: 60px;
+    }
+
+    .hero { padding-top: 62px; padding-bottom: 72px; }
+    .hero-proof { gap: 12px; }
+    .asset-window { width: 108%; margin-left: -4%; }
+    .fragmentation-map { min-height: 520px; }
+    .ownership__visual { min-height: 590px; }
+    .owner-card { max-width: 178px; }
+    .fit-card { padding: 30px 20px; }
+    .lead-form { padding: 22px 18px; }
+}
