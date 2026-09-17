@@ -72,6 +72,9 @@ section[id],
 }
 
 /* Cómo funciona: iconografía Tabler consistente con el resto de la landing. */
+#como-funciona .process-step .process-number {
+    display: none !important;
+}
 .process-icon {
     display: inline-flex;
     align-items: center;
