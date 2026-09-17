@@ -71,6 +71,42 @@ section[id],
     margin-bottom: 18px;
 }
 
+/* Cómo funciona: iconografía Tabler consistente con el resto de la landing. */
+.process-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(0, 184, 240, .16);
+    border-radius: 13px;
+    color: var(--brand-navy-950);
+    background: linear-gradient(180deg, rgba(0, 184, 240, .11), rgba(0, 184, 240, .055));
+    box-shadow: 0 8px 20px rgba(7, 41, 94, .055);
+    font-family: "tabler-icons" !important;
+    font-size: 0;
+    line-height: 1;
+    transition: transform .18s ease, border-color .18s ease, background-color .18s ease, box-shadow .18s ease;
+}
+.process-icon i {
+    font-size: 23px;
+    line-height: 1;
+}
+.process-arrow {
+    align-self: center;
+    color: rgba(7, 41, 94, .24);
+    font-size: 21px;
+    line-height: 1;
+}
+@media (hover: hover) and (pointer: fine) {
+    .process-step:hover .process-icon {
+        border-color: rgba(0, 184, 240, .34);
+        background: rgba(0, 184, 240, .11);
+        box-shadow: 0 11px 24px rgba(7, 41, 94, .08);
+        transform: translateY(-2px);
+    }
+}
+
 /* Seguridad: cambia de split repetitivo a encabezado + tres decisiones visuales. */
 .security-grid {
     grid-template-columns: 1fr;
@@ -168,6 +204,12 @@ section[id],
         margin-right: 13px;
         font-size: 23px;
     }
+    .process-icon {
+        width: 46px;
+        height: 46px;
+    }
+    .process-icon i { font-size: 22px; }
+    .process-arrow { font-size: 20px; }
     .benefit-list { grid-template-columns: 1fr; }
     .benefit-list article,
     .benefit-list article:first-child { padding: 22px; }
