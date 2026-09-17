@@ -26,6 +26,10 @@
         window.addEventListener('resize', requestUpdate);
     }
 
+    document.querySelectorAll('#como-funciona .process-step .process-number').forEach((element) => {
+        element.remove();
+    });
+
     const processIcons = [
         'ti-package',
         'ti-qrcode',
