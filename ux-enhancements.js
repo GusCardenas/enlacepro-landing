@@ -33,6 +33,40 @@
         companyFooter.appendChild(linkedin);
     }
 
+    const chapters = [
+        { selector: '#problema .section-heading', number: '01', label: 'El problema' },
+        { selector: '#producto .identity__copy', number: '02', label: 'El producto' },
+        { selector: '#seguridad .security-copy', number: '03', label: 'Control y continuidad' },
+        { selector: '.fit-section .fit-card__copy', number: '04', label: 'Adopción' },
+        { selector: '#planes .plans-intro', number: '05', label: 'Evaluación' }
+    ];
+
+    document.querySelectorAll('.section-index').forEach((index) => {
+        index.setAttribute('aria-hidden', 'true');
+    });
+
+    chapters.forEach(({ selector, number, label }) => {
+        const target = document.querySelector(selector);
+        if (!target || target.querySelector(':scope > .chapter-marker')) return;
+
+        const marker = document.createElement('div');
+        marker.className = 'chapter-marker';
+        marker.setAttribute('aria-label', `Capítulo ${number}: ${label}`);
+        marker.innerHTML = `<span class="chapter-marker__number">${number}</span><span class="chapter-marker__label">${label}</span>`;
+        target.prepend(marker);
+    });
+
+    const securityCards = document.querySelector('#seguridad .security-cards');
+    if (securityCards && !document.querySelector('#seguridad .security-transparency')) {
+        const note = document.createElement('div');
+        note.className = 'security-transparency';
+        note.innerHTML = `
+            <span class="security-transparency__icon" aria-hidden="true"><i class="ti ti-shield-question"></i></span>
+            <p><strong>Transparencia sobre seguridad.</strong> EnlacePro no comunica certificaciones ni controles técnicos que aún no estén formalmente definidos y verificados. Las políticas de respaldo, cifrado, recuperación y otros controles se documentarán antes de asumir compromisos comerciales sobre ellos.</p>
+        `;
+        securityCards.insertAdjacentElement('afterend', note);
+    }
+
     const bar = document.querySelector('.reading-progress__bar');
     let ticking = false;
 
@@ -64,6 +98,7 @@
     if (reduceMotion || !('IntersectionObserver' in window)) return;
 
     const selectors = [
+        '.chapter-marker',
         '.section-heading',
         '.fragmentation-map',
         '.problem-copy',
@@ -77,6 +112,7 @@
         '.operational-outcome',
         '.security-copy',
         '.security-card',
+        '.security-transparency',
         '.ownership__visual',
         '.ownership__copy',
         '.qr-section__copy',
