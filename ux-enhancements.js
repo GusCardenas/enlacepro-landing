@@ -26,6 +26,32 @@
         window.addEventListener('resize', requestUpdate);
     }
 
+    const processIcons = [
+        'ti-package',
+        'ti-qrcode',
+        'ti-file-certificate',
+        'ti-history',
+        'ti-search'
+    ];
+
+    document.querySelectorAll('.process-step .process-icon').forEach((element, index) => {
+        const iconClass = processIcons[index];
+        if (!iconClass) return;
+
+        element.textContent = '';
+        element.setAttribute('aria-hidden', 'true');
+
+        const icon = document.createElement('i');
+        icon.className = `ti ${iconClass}`;
+        element.appendChild(icon);
+    });
+
+    document.querySelectorAll('.process-flow > i').forEach((arrow) => {
+        arrow.textContent = '';
+        arrow.className = 'process-arrow ti ti-arrow-right';
+        arrow.setAttribute('aria-hidden', 'true');
+    });
+
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     document.documentElement.classList.add('motion-enabled');
 
