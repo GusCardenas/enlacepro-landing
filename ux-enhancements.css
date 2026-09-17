@@ -16,11 +16,9 @@
     transform: translateY(-160%);
     transition: transform .16s ease;
 }
-.skip-link:focus {
-    transform: translateY(0);
-}
+.skip-link:focus { transform: translateY(0); }
 
-/* Progreso de lectura: orientación ligera sin sumar otro control flotante. */
+/* Progreso de lectura */
 .reading-progress {
     position: fixed;
     top: 0;
@@ -44,11 +42,9 @@
 
 /* Los anchors no quedan escondidos bajo el header sticky. */
 section[id],
-#diferenciales {
-    scroll-margin-top: 96px;
-}
+#diferenciales { scroll-margin-top: 96px; }
 
-/* Numeración narrativa: actúa como marcador de capítulo junto al eyebrow. */
+/* Numeración narrativa */
 .section-index {
     display: inline-flex;
     align-items: center;
@@ -71,10 +67,7 @@ section[id],
     margin-bottom: 18px;
 }
 
-/* Cómo funciona: iconografía Tabler consistente con el resto de la landing. */
-#como-funciona .process-step .process-number {
-    display: none !important;
-}
+/* Cómo funciona: iconografía Tabler */
 .process-icon {
     display: inline-flex;
     align-items: center;
@@ -86,15 +79,10 @@ section[id],
     color: var(--brand-navy-950);
     background: linear-gradient(180deg, rgba(0, 184, 240, .11), rgba(0, 184, 240, .055));
     box-shadow: 0 8px 20px rgba(7, 41, 94, .055);
-    font-family: "tabler-icons" !important;
-    font-size: 0;
     line-height: 1;
     transition: transform .18s ease, border-color .18s ease, background-color .18s ease, box-shadow .18s ease;
 }
-.process-icon i {
-    font-size: 23px;
-    line-height: 1;
-}
+.process-icon i { font-size: 23px; line-height: 1; }
 .process-arrow {
     align-self: center;
     color: rgba(7, 41, 94, .24);
@@ -110,7 +98,68 @@ section[id],
     }
 }
 
-/* Seguridad: cambia de split repetitivo a encabezado + tres decisiones visuales. */
+/* Capacidades + resultado: evita una sección redundante y cierra el bloque con impacto operacional. */
+.operational-outcomes {
+    margin-top: 56px;
+    padding-top: 42px;
+    border-top: 1px solid var(--neutral-200);
+}
+.operational-outcomes__intro {
+    max-width: 760px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+.operational-outcomes__intro .eyebrow { margin-bottom: 12px; }
+.operational-outcomes__intro h3 {
+    margin: 0;
+    color: var(--brand-navy-950);
+    font-family: var(--font-display);
+    font-size: clamp(28px, 3vw, 38px);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -.035em;
+}
+.operational-outcomes__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+.operational-outcome {
+    min-height: 100%;
+    padding: 26px;
+    border: 1px solid var(--neutral-200);
+    border-radius: 16px;
+    background: var(--neutral-50);
+}
+.operational-outcome__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 184, 240, .18);
+    border-radius: 12px;
+    color: var(--brand-navy-950);
+    background: var(--brand-cyan-50);
+}
+.operational-outcome__icon i { font-size: 22px; line-height: 1; }
+.operational-outcome h4 {
+    margin: 0;
+    color: var(--brand-navy-950);
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.28;
+}
+.operational-outcome p {
+    margin: 10px 0 0;
+    color: var(--neutral-600);
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+/* Seguridad: encabezado + tres conceptos claros, sin promesas técnicas no definidas. */
 .security-grid {
     grid-template-columns: 1fr;
     gap: 42px;
@@ -124,11 +173,6 @@ section[id],
     max-width: 720px;
     margin-inline: auto;
 }
-.security-note {
-    max-width: 760px;
-    margin-inline: auto;
-    text-align: left;
-}
 .security-cards {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
@@ -140,82 +184,38 @@ section[id],
     padding: 30px 26px;
     text-align: center;
 }
-.security-card__icon {
-    margin-inline: auto;
-}
-.security-card__icon i {
-    font-size: 25px;
-    line-height: 1;
-}
+.security-card__icon { margin-inline: auto; }
+.security-card__icon i { font-size: 25px; line-height: 1; }
 
-/* Beneficios: una banda de cuatro bloques rompe el patrón texto/mockup. */
-.benefits__grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-}
-.benefits__copy {
-    max-width: 780px;
-    margin-inline: auto;
-    text-align: center;
-}
-.benefit-list {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 16px;
-}
-.benefit-list article,
-.benefit-list article:first-child {
-    display: block;
-    min-height: 100%;
-    padding: 24px;
-    border: 1px solid var(--neutral-200);
-    border-radius: 16px;
-    background: var(--white);
-    box-shadow: var(--shadow-sm);
-}
-.benefit-list > article > span {
-    margin-bottom: 18px;
-}
-.benefit-list h3 {
-    font-size: 20px;
-}
-.benefit-list p {
-    margin-top: 8px;
-    font-size: 16px;
-    line-height: 1.6;
+@media (hover: hover) and (pointer: fine) {
+    .operational-outcome {
+        transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+    }
+    .operational-outcome:hover {
+        border-color: rgba(0, 184, 240, .28);
+        box-shadow: 0 14px 32px rgba(7, 41, 94, .08);
+        transform: translateY(-2px);
+    }
 }
 
 @media (max-width: 1080px) {
-    .benefit-list {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+    .operational-outcomes__grid { grid-template-columns: 1fr; }
+    .operational-outcome { max-width: 760px; width: 100%; margin-inline: auto; }
 }
 
 @media (max-width: 860px) {
-    .security-cards {
-        grid-template-columns: 1fr;
-    }
-    .security-card {
-        max-width: 720px;
-        width: 100%;
-        margin-inline: auto;
-    }
+    .security-cards { grid-template-columns: 1fr; }
+    .security-card { max-width: 720px; width: 100%; margin-inline: auto; }
 }
 
 @media (max-width: 600px) {
     .reading-progress { height: 2px; }
-    .section-index {
-        margin-right: 13px;
-        font-size: 23px;
-    }
-    .process-icon {
-        width: 46px;
-        height: 46px;
-    }
+    .section-index { margin-right: 13px; font-size: 23px; }
+    .process-icon { width: 46px; height: 46px; }
     .process-icon i { font-size: 22px; }
     .process-arrow { font-size: 20px; }
-    .benefit-list { grid-template-columns: 1fr; }
-    .benefit-list article,
-    .benefit-list article:first-child { padding: 22px; }
+    .operational-outcomes { margin-top: 44px; padding-top: 34px; }
+    .operational-outcome { padding: 22px; }
 }
 
 @media print {
