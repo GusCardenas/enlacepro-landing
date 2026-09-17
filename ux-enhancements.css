@@ -44,27 +44,41 @@
 section[id],
 #diferenciales { scroll-margin-top: 96px; }
 
-/* Numeración narrativa */
-.section-index {
+/* Los números legacy dejan de actuar como numeración de secciones. */
+.section-index { display: none !important; }
+
+/* Cinco capítulos narrativos: numeran etapas, no cada bloque de la landing. */
+.chapter-marker {
     display: inline-flex;
     align-items: center;
-    margin: 0 16px 18px 0;
+    gap: 14px;
+    margin-bottom: 18px;
+    color: var(--brand-navy-950);
+}
+.chapter-marker__number {
     color: var(--brand-cyan-600);
     font-family: var(--font-display);
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 700;
     line-height: 1;
-    letter-spacing: .02em;
-    vertical-align: middle;
+    letter-spacing: -.02em;
 }
-.section-index + .eyebrow {
-    margin-bottom: 18px;
-    vertical-align: middle;
+.chapter-marker__label {
+    padding-top: 2px;
+    color: var(--brand-navy-900);
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: .1em;
+    text-transform: uppercase;
 }
-.problem-copy .section-index {
-    display: flex;
-    width: fit-content;
-    margin-bottom: 18px;
+.section-heading--center > .chapter-marker,
+.security-copy > .chapter-marker {
+    justify-content: center;
+}
+.plans-intro > .chapter-marker {
+    justify-content: flex-start;
 }
 
 /* Cómo funciona: iconografía Tabler */
@@ -159,7 +173,7 @@ section[id],
     line-height: 1.65;
 }
 
-/* Seguridad: encabezado + tres conceptos claros, sin promesas técnicas no definidas. */
+/* Seguridad: arquitectura clara + transparencia explícita sobre lo aún no definido. */
 .security-grid {
     grid-template-columns: 1fr;
     gap: 42px;
@@ -186,6 +200,36 @@ section[id],
 }
 .security-card__icon { margin-inline: auto; }
 .security-card__icon i { font-size: 25px; line-height: 1; }
+.security-transparency {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: start;
+    max-width: 900px;
+    margin: -4px auto 0;
+    padding: 20px 22px;
+    border: 1px solid rgba(7, 41, 94, .12);
+    border-radius: 14px;
+    background: var(--neutral-50);
+}
+.security-transparency__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    color: var(--brand-navy-950);
+    background: var(--brand-cyan-50);
+}
+.security-transparency__icon i { font-size: 20px; line-height: 1; }
+.security-transparency p {
+    margin: 0;
+    color: var(--neutral-600);
+    font-size: 15px;
+    line-height: 1.65;
+}
+.security-transparency strong { color: var(--brand-navy-950); }
 
 @media (hover: hover) and (pointer: fine) {
     .operational-outcome {
@@ -210,12 +254,19 @@ section[id],
 
 @media (max-width: 600px) {
     .reading-progress { height: 2px; }
-    .section-index { margin-right: 13px; font-size: 23px; }
+    .chapter-marker { gap: 11px; margin-bottom: 15px; }
+    .chapter-marker__number { font-size: 25px; }
+    .chapter-marker__label { font-size: 12px; letter-spacing: .08em; }
     .process-icon { width: 46px; height: 46px; }
     .process-icon i { font-size: 22px; }
     .process-arrow { font-size: 20px; }
     .operational-outcomes { margin-top: 44px; padding-top: 34px; }
     .operational-outcome { padding: 22px; }
+    .security-transparency {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 18px;
+    }
 }
 
 @media print {
