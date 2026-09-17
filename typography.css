@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap");
+
+:root {
+    --font-display: "IBM Plex Sans", Arial, sans-serif;
+    --font-body: "Source Sans 3", Arial, sans-serif;
+    --type-body: 18px;
+    --type-body-mobile: 17px;
+    --type-small: 14px;
+    --type-ui: 16px;
+}
+
+html { font-size: 100%; }
+body { font-family: var(--font-body); font-size: var(--type-body); line-height: 1.65; }
+
+h1, h2, h3, h4, h5, h6,
+.section-heading h2,
+.identity__copy h2,
+.ownership__copy h2,
+.qr-section__copy h2,
+.benefits__copy h2,
+.fit-card h2,
+.faq-copy h2,
+.contact-copy h2,
+.problem-copy h3,
+.feature-card h3,
+.persona-card h3,
+.benefit-list h3,
+.product-content__top h2,
+.fragment-node strong,
+.fragment-core strong,
+.owner-card strong,
+.asset-transfer strong,
+.phone-body h3 {
+    font-family: var(--font-display);
+}
+
+/* Navegación y acciones */
+.site-nav a,
+.nav-login { font-size: 16px; font-weight: 600; }
+.btn { min-height: 50px; padding: 12px 21px; font-size: 16px; font-weight: 700; }
+.btn-sm { min-height: 44px; padding: 10px 17px; font-size: 15px; }
+
+/* Jerarquía editorial */
+.eyebrow { font-size: 14px; font-weight: 700; letter-spacing: .09em; }
+.section-index { font-size: 14px; letter-spacing: .10em; }
+.section-heading h2,
+.identity__copy h2,
+.ownership__copy h2,
+.qr-section__copy h2,
+.benefits__copy h2,
+.fit-card h2,
+.faq-copy h2,
+.contact-copy h2 {
+    font-size: clamp(38px, 4vw, 52px);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -.025em;
+}
+.section-heading p { font-size: 18px; line-height: 1.7; }
+
+/* Hero */
+body .hero h1 {
+    font-size: clamp(56px, 6vw, 74px) !important;
+    font-weight: 700;
+    line-height: 1.03 !important;
+    letter-spacing: -.035em;
+}
+.hero__copy > p { font-size: 20px; line-height: 1.65; }
+body .hero .hero-subline {
+    font-size: 18px !important;
+    line-height: 1.65 !important;
+}
+.hero-proof span { font-size: 14px !important; line-height: 1.45; }
+
+/* Mockup del producto: legible aun siendo demostrativo */
+.asset-window__bar,
+.asset-window__bar strong { font-size: 13px; }
+.micro-label { font-size: 12px; letter-spacing: .08em; }
+.product-content__top h2 { font-size: 24px; line-height: 1.18; letter-spacing: -.02em; }
+.status { font-size: 12px; }
+.asset-meta span { font-size: 12px; }
+.asset-meta strong { font-size: 13px; line-height: 1.35; }
+.asset-panel__header { font-size: 12px; }
+.timeline-row strong { font-size: 13px; }
+.timeline-row small,
+.timeline-row em { font-size: 11px; line-height: 1.4; }
+.qr-placeholder { font-size: 12px; }
+.asset-window__footer div:nth-child(2) span { font-size: 11px; }
+.asset-window__footer div:nth-child(2) strong { font-size: 13px; }
+.public-badge { font-size: 11px; }
+
+/* Problema e impacto */
+.fragment-node strong { font-size: 16px; }
+.fragment-node span { font-size: 14px; line-height: 1.45; }
+.fragment-core span { font-size: 12px; letter-spacing: .10em; }
+.fragment-core strong { font-size: 20px; }
+.problem-copy h3 { font-size: 34px; line-height: 1.22; letter-spacing: -.02em; }
+.problem-copy > p { font-size: 18px; line-height: 1.7; }
+.callout strong { font-size: 17px; }
+.callout span { font-size: 15px; line-height: 1.6; }
+.impact-card > span { font-size: 13px; }
+.impact-card h3 { font-size: 22px; line-height: 1.25; }
+.impact-card p { font-size: 16px; line-height: 1.65; }
+
+/* Producto, flujo y capacidades */
+.identity__copy > p,
+.ownership__copy > p,
+.qr-section__copy > p,
+.benefits__copy > p,
+.fit-card__copy > p,
+.faq-copy > p,
+.contact-copy > p { font-size: 18px; line-height: 1.7; }
+.identity-list span { font-size: 17px; line-height: 1.6; }
+.generic-image-card figcaption { font-size: 14px; line-height: 1.45; }
+.process-number { font-size: 13px; }
+.process-icon { font-size: 12px; }
+.process-step h3 { font-size: 19px; line-height: 1.25; }
+.process-step p { font-size: 16px; line-height: 1.55; }
+.feature-kicker { font-size: 13px; letter-spacing: .10em; }
+.feature-card h3 { font-size: 23px; line-height: 1.25; letter-spacing: -.015em; }
+.feature-card p { font-size: 16px; line-height: 1.65; }
+.feature-link { font-size: 14px; line-height: 1.45; }
+
+/* Transferencia y QR público */
+.owner-card span { font-size: 12px; }
+.owner-card strong { font-size: 17px; }
+.owner-card small { font-size: 14px; line-height: 1.4; }
+.asset-transfer__qr { font-size: 13px; }
+.asset-transfer strong { font-size: 18px; line-height: 1.3; }
+.asset-transfer small { font-size: 13px; }
+.history-line { font-size: 12px; }
+.dark-list span { font-size: 16px; line-height: 1.55; }
+.phone-bar { font-size: 11px; }
+.public-label { font-size: 12px; }
+.phone-body h3 { font-size: 24px; line-height: 1.25; }
+.phone-body dt { font-size: 13px; }
+.phone-body dd { font-size: 14px; }
+
+/* Perfiles, beneficios y posicionamiento */
+.persona-role { font-size: 13px; letter-spacing: .08em; }
+.persona-card h3 { font-size: 23px; line-height: 1.25; }
+.persona-card p { font-size: 16px; line-height: 1.65; }
+.persona-card__body > strong { font-size: 14px; line-height: 1.5; }
+.benefit-list > article > span { font-size: 12px; }
+.benefit-list h3 { font-size: 20px; line-height: 1.3; }
+.benefit-list p { font-size: 16px; line-height: 1.6; }
+.fit-tags span { font-size: 14px; }
+.spectrum-item span { font-size: 14px; }
+.spectrum-item small { font-size: 13px; }
+.spectrum-line strong { font-size: 15px; }
+.fit-spectrum > p { font-size: 13px; line-height: 1.45; }
+
+/* FAQ y conversión */
+.faq-list summary { font-size: 18px; line-height: 1.4; }
+.faq-list p { font-size: 16px; line-height: 1.65; }
+.contact-points span { font-size: 14px; }
+.lead-form label { font-size: 16px; line-height: 1.4; }
+.lead-form input,
+.lead-form select,
+.lead-form textarea { font-size: 16px; line-height: 1.4; }
+.lead-form > small { font-size: 13px; line-height: 1.45; }
+
+/* Footer */
+.site-footer__top > div:first-child p { font-size: 15px; line-height: 1.6; }
+.footer-links strong { font-size: 15px; }
+.footer-links a { font-size: 14px; line-height: 1.45; }
+.site-footer__bottom { font-size: 13px; line-height: 1.45; }
+
+@media (max-width: 1080px) {
+    body .hero h1 { font-size: 58px !important; }
+}
+
+@media (max-width: 760px) {
+    body { font-size: var(--type-body-mobile); }
+    .site-header__actions .btn { font-size: 15px; }
+    body .hero h1 { font-size: 46px !important; line-height: 1.06 !important; }
+    .hero__copy > p { font-size: 18px; }
+    body .hero .hero-subline { font-size: 17px !important; }
+    .section-heading h2,
+    .identity__copy h2,
+    .ownership__copy h2,
+    .qr-section__copy h2,
+    .benefits__copy h2,
+    .fit-card h2,
+    .faq-copy h2,
+    .contact-copy h2 { font-size: 34px; line-height: 1.14; }
+    .section-heading p,
+    .identity__copy > p,
+    .ownership__copy > p,
+    .qr-section__copy > p,
+    .benefits__copy > p,
+    .fit-card__copy > p,
+    .faq-copy > p,
+    .contact-copy > p { font-size: 17px; }
+    .problem-copy h3 { font-size: 29px; }
+    .identity-list span { font-size: 16px; }
+    .process-step p,
+    .feature-card p,
+    .persona-card p,
+    .benefit-list p,
+    .faq-list p,
+    .dark-list span { font-size: 16px; }
+    .lead-form label,
+    .lead-form input,
+    .lead-form select,
+    .lead-form textarea { font-size: 16px; }
+}
+
+@media (max-width: 480px) {
+    body .hero h1 { font-size: 42px !important; }
+    .section-heading h2,
+    .identity__copy h2,
+    .ownership__copy h2,
+    .qr-section__copy h2,
+    .benefits__copy h2,
+    .fit-card h2,
+    .faq-copy h2,
+    .contact-copy h2 { font-size: 32px; }
+    .eyebrow,
+    .section-index { font-size: 13px; }
+}
