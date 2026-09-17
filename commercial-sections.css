@@ -167,7 +167,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    color: var(--brand-cyan-600);
+    color:var(--brand-cyan-text);
     font-weight: 700;
 }
 .plan-card .btn { margin-top: auto; }

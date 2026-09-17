@@ -56,7 +56,7 @@ section[id],
     color: var(--brand-navy-950);
 }
 .chapter-marker__number {
-    color: var(--brand-cyan-600);
+    color:var(--brand-cyan-text);
     font-family: var(--font-display);
     font-size: 30px;
     font-weight: 700;
@@ -96,7 +96,7 @@ section[id],
     line-height: 1;
     transition: transform .18s ease, border-color .18s ease, background-color .18s ease, box-shadow .18s ease;
 }
-.process-icon i { font-size: 23px; line-height: 1; }
+.process-icon i, .process-icon svg { font-size: 23px; line-height: 1; }
 .process-arrow {
     align-self: center;
     color: rgba(7, 41, 94, .24);
@@ -157,7 +157,7 @@ section[id],
     color: var(--brand-navy-950);
     background: var(--brand-cyan-50);
 }
-.operational-outcome__icon i { font-size: 22px; line-height: 1; }
+.operational-outcome__icon i, .operational-outcome__icon svg { font-size: 22px; line-height: 1; }
 .operational-outcome h4 {
     margin: 0;
     color: var(--brand-navy-950);
@@ -199,7 +199,7 @@ section[id],
     text-align: center;
 }
 .security-card__icon { margin-inline: auto; }
-.security-card__icon i { font-size: 25px; line-height: 1; }
+.security-card__icon i, .security-card__icon svg { font-size: 25px; line-height: 1; }
 .security-transparency {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -222,7 +222,7 @@ section[id],
     color: var(--brand-navy-950);
     background: var(--brand-cyan-50);
 }
-.security-transparency__icon i { font-size: 20px; line-height: 1; }
+.security-transparency__icon i, .security-transparency__icon svg { font-size: 20px; line-height: 1; }
 .security-transparency p {
     margin: 0;
     color: var(--neutral-600);
@@ -258,7 +258,7 @@ section[id],
     .chapter-marker__number { font-size: 25px; }
     .chapter-marker__label { font-size: 12px; letter-spacing: .08em; }
     .process-icon { width: 46px; height: 46px; }
-    .process-icon i { font-size: 22px; }
+    .process-icon i, .process-icon svg { font-size: 22px; }
     .process-arrow { font-size: 20px; }
     .operational-outcomes { margin-top: 44px; padding-top: 34px; }
     .operational-outcome { padding: 22px; }

@@ -29,7 +29,7 @@
         linkedin.href = 'https://www.linkedin.com/company/enlacepro-cl';
         linkedin.target = '_blank';
         linkedin.rel = 'noopener noreferrer';
-        linkedin.innerHTML = '<i class="ti ti-brand-linkedin" aria-hidden="true"></i> LinkedIn';
+        linkedin.innerHTML = '<svg class="ti-svg" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10" /></svg> LinkedIn';
         companyFooter.appendChild(linkedin);
     }
 
@@ -61,7 +61,7 @@
         const note = document.createElement('div');
         note.className = 'security-transparency';
         note.innerHTML = `
-            <span class="security-transparency__icon" aria-hidden="true"><i class="ti ti-shield-question"></i></span>
+            <span class="security-transparency__icon" aria-hidden="true"><svg class="ti-svg" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M15.065 19.732c-.95 .557 -1.98 .986 -3.065 1.268a12 12 0 0 1 -8.5 -15a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3c.51 1.738 .617 3.55 .333 5.303" /><path d="M19 22v.01" /><path d="M19 19a2.003 2.003 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483" /></svg></span>
             <p><strong>Transparencia sobre seguridad.</strong> EnlacePro no comunica certificaciones ni controles técnicos que aún no estén formalmente definidos y verificados. Las políticas de respaldo, cifrado, recuperación y otros controles se documentarán antes de asumir compromisos comerciales sobre ellos.</p>
         `;
         securityCards.insertAdjacentElement('afterend', note);
