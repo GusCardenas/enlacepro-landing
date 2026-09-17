@@ -92,6 +92,55 @@
         window.addEventListener('resize', requestUpdate);
     }
 
+    const leadForm = document.getElementById('lead-form');
+    if (leadForm) {
+        const statusEl = leadForm.querySelector('.lead-form__status');
+        const submitBtn = leadForm.querySelector('button[type="submit"]');
+        const submitLabel = submitBtn ? submitBtn.textContent : '';
+
+        const setStatus = (message, kind) => {
+            if (!statusEl) return;
+            statusEl.textContent = message;
+            statusEl.classList.remove('is-success', 'is-error');
+            if (kind) statusEl.classList.add(`is-${kind}`);
+        };
+
+        leadForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            if (leadForm.querySelector('.lead-form__honeypot')?.checked) return;
+
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Enviando…';
+            }
+            setStatus('', null);
+
+            try {
+                const formData = new FormData(leadForm);
+                const response = await fetch(leadForm.action, {
+                    method: 'POST',
+                    body: formData
+                });
+                const result = await response.json().catch(() => ({}));
+
+                if (response.ok && result.success !== false) {
+                    leadForm.reset();
+                    setStatus('Listo. Recibimos tu solicitud y te contactaremos a la brevedad.', 'success');
+                } else {
+                    setStatus('No pudimos enviar tu solicitud. Escríbenos directo a contacto@enlacepro.cl.', 'error');
+                }
+            } catch (error) {
+                setStatus('No pudimos enviar tu solicitud. Escríbenos directo a contacto@enlacepro.cl.', 'error');
+            } finally {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = submitLabel;
+                }
+            }
+        });
+    }
+
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     document.documentElement.classList.add('motion-enabled');
 

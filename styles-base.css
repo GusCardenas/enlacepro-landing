@@ -295,6 +295,10 @@ img,svg { display:block;max-width:100%; }
 .lead-form textarea { resize:vertical; }
 .lead-form input:focus,.lead-form select:focus,.lead-form textarea:focus { border-color:var(--brand-cyan-500);box-shadow:0 0 0 3px rgba(0,184,240,.11); }
 .lead-form > small { display:block;margin-top:10px;color:var(--neutral-400);font-size:8px;text-align:center; }
+.lead-form__honeypot { position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none; }
+.lead-form__status { min-height:16px;margin:10px 0 0;font-size:11px;font-weight:700;text-align:center; }
+.lead-form__status.is-success { color:#0A8F5B; }
+.lead-form__status.is-error { color:#C23B3B; }
 
 .site-footer { position:relative;color:rgba(255,255,255,.68);background:#041D45; }
 .site-footer::before { content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent 0%,var(--brand-cyan-500) 24%,var(--brand-cyan-500) 76%,transparent 100%);opacity:.8; }

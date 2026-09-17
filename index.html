@@ -472,12 +472,17 @@
                     <div class="review-offer"><strong>Una conversación útil antes de hablar de compra.</strong><span>Buscamos entender volumen, tipos de activos, documentación, vencimientos e historial antes de mostrarte una solución genérica.</span></div>
                     <div class="contact-points"><span><i></i> Revisión enfocada en tu operación</span><span><i></i> Ideal para 50–1.000 activos</span><span><i></i> Demo contextualizada</span></div>
                 </div>
-                <form class="lead-form" action="#" method="post" autocomplete="on">
+                <form class="lead-form" id="lead-form" action="https://api.web3forms.com/submit" method="post" autocomplete="on">
+                    <input type="hidden" name="access_key" value="a6af1ca8-35b2-4d94-939b-261c8099dc70">
+                    <input type="hidden" name="subject" value="Nueva solicitud de demo — EnlacePro">
+                    <input type="hidden" name="from_name" value="Landing EnlacePro">
+                    <input type="checkbox" name="botcheck" class="lead-form__honeypot" tabindex="-1" autocomplete="off">
                     <div class="form-row"><label>Nombre y apellido<input type="text" name="name" autocomplete="name" placeholder="Tu nombre" required></label><label>Empresa<input type="text" name="company" autocomplete="organization" placeholder="Nombre de empresa" required></label></div>
                     <label>Correo corporativo<input type="email" name="email" autocomplete="email" placeholder="nombre@empresa.cl" required></label>
                     <div class="form-row"><label>Teléfono <span>Opcional</span><input type="tel" name="phone" autocomplete="tel" placeholder="+56 9 ..."></label><label>Cantidad aproximada de activos<select name="assets" required><option value="">Seleccionar</option><option value="under-50">Menos de 50</option><option value="50-250">50–250 · Plan Operación</option><option value="251-1000">251–1.000 · Plan Escala</option><option value="over-1000">Más de 1.000</option></select></label></div>
                     <button class="btn btn-accent btn-block" type="submit">Solicitar revisión + demo</button>
                     <small>Al enviar tus datos aceptas ser contactado por EnlacePro respecto de esta solicitud.</small>
+                    <p class="lead-form__status" role="status" aria-live="polite"></p>
                 </form>
             </div>
         </section>
