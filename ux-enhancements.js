@@ -52,7 +52,7 @@
         const marker = document.createElement('div');
         marker.className = 'chapter-marker';
         marker.setAttribute('aria-label', `Capítulo ${number}: ${label}`);
-        marker.innerHTML = `<span class="chapter-marker__number">${number}</span><span class="chapter-marker__label">${label}</span>`;
+        marker.innerHTML = `<span class="chapter-marker__number">${number}</span>`;
         target.prepend(marker);
     });
 
