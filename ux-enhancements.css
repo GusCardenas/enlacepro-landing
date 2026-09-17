@@ -81,6 +81,10 @@ section[id],
 .security-card__icon {
     margin-inline: auto;
 }
+.security-card__icon i {
+    font-size: 25px;
+    line-height: 1;
+}
 
 /* Beneficios: una banda de cuatro bloques rompe el patrón texto/mockup. */
 .benefits__grid {
