@@ -48,6 +48,29 @@ section[id],
     scroll-margin-top: 96px;
 }
 
+/* Numeración narrativa: actúa como marcador de capítulo junto al eyebrow. */
+.section-index {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 16px 18px 0;
+    color: var(--brand-cyan-600);
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: .02em;
+    vertical-align: middle;
+}
+.section-index + .eyebrow {
+    margin-bottom: 18px;
+    vertical-align: middle;
+}
+.problem-copy .section-index {
+    display: flex;
+    width: fit-content;
+    margin-bottom: 18px;
+}
+
 /* Seguridad: cambia de split repetitivo a encabezado + tres decisiones visuales. */
 .security-grid {
     grid-template-columns: 1fr;
@@ -141,6 +164,10 @@ section[id],
 
 @media (max-width: 600px) {
     .reading-progress { height: 2px; }
+    .section-index {
+        margin-right: 13px;
+        font-size: 23px;
+    }
     .benefit-list { grid-template-columns: 1fr; }
     .benefit-list article,
     .benefit-list article:first-child { padding: 22px; }
