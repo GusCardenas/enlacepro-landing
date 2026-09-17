@@ -273,3 +273,7 @@ section[id],
     .skip-link,
     .reading-progress { display: none !important; }
 }
+
+/* Capítulo sobre sección oscura (landing compacta: el diferencial) */
+.section-dark .chapter-marker__number { color: var(--brand-cyan-500); }
+.qr-section__copy > .chapter-marker { justify-content: flex-start; }

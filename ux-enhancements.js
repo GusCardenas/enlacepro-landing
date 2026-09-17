@@ -35,10 +35,9 @@
 
     const chapters = [
         { selector: '#problema .section-heading', number: '01', label: 'El problema' },
-        { selector: '#producto .identity__copy', number: '02', label: 'El producto' },
-        { selector: '#seguridad .security-copy', number: '03', label: 'Control y continuidad' },
-        { selector: '.fit-section .fit-card__copy', number: '04', label: 'Adopción' },
-        { selector: '#planes .plans-intro', number: '05', label: 'Evaluación' }
+        { selector: '#como-funciona .section-heading', number: '02', label: 'Cómo funciona' },
+        { selector: '.qr-section .qr-section__copy', number: '03', label: 'El diferencial' },
+        { selector: '#planes .plans-intro', number: '04', label: 'Planes' }
     ];
 
     document.querySelectorAll('.section-index').forEach((index) => {
