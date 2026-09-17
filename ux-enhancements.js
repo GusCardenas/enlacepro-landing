@@ -1,6 +1,38 @@
 (() => {
     'use strict';
 
+    const tagline = 'Cada activo bajo control';
+
+    document.title = `EnlacePro · ${tagline}`;
+
+    const heroTitle = document.querySelector('.hero h1');
+    if (heroTitle) {
+        heroTitle.innerHTML = 'Cada activo <span>bajo control.</span>';
+    }
+
+    document.querySelectorAll('.brand-logo').forEach((logo) => {
+        logo.alt = `EnlacePro · ${tagline}`;
+    });
+
+    const footerBottom = document.querySelector('.site-footer__bottom');
+    if (footerBottom) {
+        const footerTagline = footerBottom.querySelector('span:last-child');
+        if (footerTagline) footerTagline.textContent = `${tagline}.`;
+    }
+
+    const companyFooter = [...document.querySelectorAll('.footer-links')].find((group) => {
+        return group.querySelector('strong')?.textContent.trim() === 'Empresa';
+    });
+
+    if (companyFooter && !companyFooter.querySelector('a[href*="linkedin.com/company/enlacepro-cl"]')) {
+        const linkedin = document.createElement('a');
+        linkedin.href = 'https://www.linkedin.com/company/enlacepro-cl';
+        linkedin.target = '_blank';
+        linkedin.rel = 'noopener noreferrer';
+        linkedin.innerHTML = '<i class="ti ti-brand-linkedin" aria-hidden="true"></i> LinkedIn';
+        companyFooter.appendChild(linkedin);
+    }
+
     const bar = document.querySelector('.reading-progress__bar');
     let ticking = false;
 
