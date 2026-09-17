@@ -26,36 +26,6 @@
         window.addEventListener('resize', requestUpdate);
     }
 
-    document.querySelectorAll('#como-funciona .process-step .process-number').forEach((element) => {
-        element.remove();
-    });
-
-    const processIcons = [
-        'ti-package',
-        'ti-qrcode',
-        'ti-file-certificate',
-        'ti-history',
-        'ti-search'
-    ];
-
-    document.querySelectorAll('.process-step .process-icon').forEach((element, index) => {
-        const iconClass = processIcons[index];
-        if (!iconClass) return;
-
-        element.textContent = '';
-        element.setAttribute('aria-hidden', 'true');
-
-        const icon = document.createElement('i');
-        icon.className = `ti ${iconClass}`;
-        element.appendChild(icon);
-    });
-
-    document.querySelectorAll('.process-flow > i').forEach((arrow) => {
-        arrow.textContent = '';
-        arrow.className = 'process-arrow ti ti-arrow-right';
-        arrow.setAttribute('aria-hidden', 'true');
-    });
-
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     document.documentElement.classList.add('motion-enabled');
 
@@ -71,14 +41,14 @@
         '.process-step',
         '.persona-card',
         '.feature-card',
+        '.operational-outcomes__intro',
+        '.operational-outcome',
+        '.security-copy',
+        '.security-card',
         '.ownership__visual',
         '.ownership__copy',
         '.qr-section__copy',
         '.public-preview',
-        '.security-copy',
-        '.security-card',
-        '.benefits__copy',
-        '.benefit-list article',
         '.fit-card',
         '.migration-copy',
         '.migration-board',
@@ -96,7 +66,7 @@
     elements.forEach((element) => {
         element.classList.add('reveal-item');
 
-        if (element.matches('.impact-card, .process-step, .persona-card, .feature-card, .security-card, .benefit-list article, .plan-card')) {
+        if (element.matches('.impact-card, .process-step, .persona-card, .feature-card, .operational-outcome, .security-card, .plan-card')) {
             const parent = element.parentElement;
             if (!groupedParents.has(parent)) groupedParents.set(parent, []);
             groupedParents.get(parent).push(element);
