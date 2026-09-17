@@ -180,18 +180,20 @@
     text-align: center;
 }
 
-.hero-text-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    min-height: 44px;
-    padding: 8px 4px;
-    color: rgba(255,255,255,.78);
-    font-size: 16px;
-    font-weight: 600;
-    text-decoration: none;
+/* Hero: una sola acción comercial. El scroll cue no compite con el CTA. */
+.hero-text-link { display: none; }
+.hero .button-row { display: block; }
+.hero .button-row .btn-accent { display: inline-flex; }
+.hero-proof::after {
+    content: "↓  Descubre cómo funciona";
+    display: block;
+    flex-basis: 100%;
+    margin-top: 15px;
+    color: rgba(255,255,255,.58);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .01em;
 }
-.hero-text-link:hover { color: var(--brand-cyan-500); }
 
 .review-offer {
     margin-top: 28px;
@@ -227,10 +229,11 @@
     .security-card__icon { width: 42px; height: 42px; }
     .security-card h3 { font-size: 20px; }
     .security-copy > p, .plans-intro p { font-size: 17px; }
+    .hero-proof::after { margin-top: 12px; font-size: 13px; }
 }
 
 @media (max-width: 480px) {
     .security-card { grid-template-columns: 1fr; }
     .plan-card { padding: 25px 20px; }
-    .hero-text-link { width: 100%; justify-content: center; }
+    .hero .button-row .btn-accent { width: 100%; }
 }
