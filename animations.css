@@ -1,0 +1,166 @@
+/* Movimiento sutil y profesional para EnlacePro */
+:root {
+    --motion-fast: 180ms;
+    --motion-base: 520ms;
+    --motion-slow: 720ms;
+    --motion-ease: cubic-bezier(.22, 1, .36, 1);
+}
+
+/* Hero: entrada inicial breve y escalonada. */
+.motion-enabled .hero__copy .eyebrow,
+.motion-enabled .hero__copy h1,
+.motion-enabled .hero__copy > p,
+.motion-enabled .hero__copy .button-row,
+.motion-enabled .hero__copy .hero-proof {
+    opacity: 0;
+    transform: translateY(14px);
+    animation: hero-enter var(--motion-slow) var(--motion-ease) forwards;
+}
+
+.motion-enabled .hero__copy h1 { animation-delay: 70ms; }
+.motion-enabled .hero__copy > p:first-of-type { animation-delay: 140ms; }
+.motion-enabled .hero__copy .hero-subline { animation-delay: 200ms; }
+.motion-enabled .hero__copy .button-row { animation-delay: 270ms; }
+.motion-enabled .hero__copy .hero-proof { animation-delay: 340ms; }
+
+.motion-enabled .asset-window {
+    opacity: 0;
+    animation: hero-window-enter 820ms var(--motion-ease) 180ms forwards;
+}
+
+@keyframes hero-enter {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes hero-window-enter {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Reveal progresivo. Los elementos siguen visibles si JS no está disponible. */
+.motion-enabled .reveal-item {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+        opacity var(--motion-base) var(--motion-ease),
+        transform var(--motion-base) var(--motion-ease);
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+.motion-enabled .reveal-item.reveal-soft {
+    transform: translateY(10px);
+}
+
+.motion-enabled .reveal-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Microinteracciones: solo en dispositivos con hover real. */
+@media (hover: hover) and (pointer: fine) {
+    .impact-card,
+    .persona-card,
+    .feature-card,
+    .security-card,
+    .benefit-list article,
+    .plan-card,
+    .migration-step {
+        transition:
+            transform var(--motion-fast) ease,
+            box-shadow var(--motion-fast) ease,
+            border-color var(--motion-fast) ease;
+    }
+
+    .impact-card:hover,
+    .persona-card:hover,
+    .feature-card:hover,
+    .security-card:hover,
+    .benefit-list article:hover,
+    .plan-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 16px 36px rgba(7, 41, 94, .10);
+    }
+
+    .feature-card:hover,
+    .security-card:hover,
+    .benefit-list article:hover,
+    .plan-card:hover {
+        border-color: rgba(0, 184, 240, .30);
+    }
+
+    .persona-image,
+    .generic-image-card {
+        overflow: hidden;
+    }
+
+    .persona-image img,
+    .generic-image-card img {
+        transition: transform 520ms var(--motion-ease), filter 320ms ease;
+    }
+
+    .persona-card:hover .persona-image img,
+    .generic-image-card:hover img {
+        transform: scale(1.018);
+    }
+
+    .btn {
+        transition:
+            transform var(--motion-fast) ease,
+            background-color var(--motion-fast) ease,
+            border-color var(--motion-fast) ease,
+            color var(--motion-fast) ease,
+            box-shadow var(--motion-fast) ease;
+    }
+
+    .btn:hover {
+        transform: translateY(-2px);
+    }
+}
+
+/* FAQ: apertura más suave sin animar la altura de forma frágil. */
+.faq-list details > p {
+    transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.faq-list details[open] > p {
+    animation: faq-content-in 260ms var(--motion-ease) both;
+}
+
+@keyframes faq-content-in {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Accesibilidad: nada de movimiento forzado si el sistema pide reducirlo. */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto !important; }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .motion-enabled .hero__copy .eyebrow,
+    .motion-enabled .hero__copy h1,
+    .motion-enabled .hero__copy > p,
+    .motion-enabled .hero__copy .button-row,
+    .motion-enabled .hero__copy .hero-proof,
+    .motion-enabled .asset-window,
+    .motion-enabled .reveal-item {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
