@@ -4,29 +4,39 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="EnlacePro identifica activos mediante QR y concentra su documentación, vencimientos, intervenciones, solicitudes e historial operacional.">
-    <meta name="theme-color" content="#0A2037">
+    <meta name="theme-color" content="#07295E">
     <title>EnlacePro · La historia de tus activos, conectada y trazable</title>
 
+    <link rel="icon" href="assets/brand/enlacepro-icon-color.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .brand { gap: 0; }
+        .brand-logo { display: block; width: 232px; height: auto; }
+        .brand-logo--footer { width: 250px; }
+        .site-header__inner { min-height: 84px; }
+        .product-sidebar__logo { display: grid; place-items: center; width: 38px; height: 38px; margin: 0 auto 24px; padding: 0; border-radius: 0; background: transparent; }
+        .product-sidebar__logo img { width: 34px; height: 34px; object-fit: contain; }
+        .public-icon { display: grid; place-items: center; }
+        .public-icon img { width: 52px; height: 52px; object-fit: contain; }
+        .site-footer .brand { width: fit-content; }
+        @media (max-width: 760px) {
+            .brand-logo { width: 190px; }
+            .site-header__inner { min-height: 72px; }
+        }
+        @media (max-width: 480px) {
+            .brand-logo { width: 164px; }
+        }
+    </style>
 </head>
 <body>
     <header class="site-header">
         <div class="container site-header__inner">
             <a class="brand" href="#inicio" aria-label="EnlacePro, ir al inicio">
-                <span class="brand-mark" aria-hidden="true">
-                    <span class="brand-mark__line brand-mark__line--top"></span>
-                    <span class="brand-mark__line brand-mark__line--bottom"></span>
-                    <span class="brand-mark__node brand-mark__node--left"></span>
-                    <span class="brand-mark__node brand-mark__node--top"></span>
-                    <span class="brand-mark__node brand-mark__node--bottom"></span>
-                </span>
-                <span class="brand-copy">
-                    <strong>EnlacePro</strong>
-                    <small>Operación · Trazabilidad · Inteligencia</small>
-                </span>
+                <img class="brand-logo brand-logo--header" src="assets/brand/enlacepro-logo-color.svg" alt="EnlacePro · Cada activo, bajo control">
             </a>
 
             <nav class="site-nav" aria-label="Navegación principal">
@@ -73,7 +83,7 @@
 
                     <div class="asset-window__body">
                         <aside class="product-sidebar" aria-hidden="true">
-                            <div class="product-sidebar__logo">EP</div>
+                            <div class="product-sidebar__logo"><img src="assets/brand/enlacepro-icon-white.svg" alt=""></div>
                             <span class="product-sidebar__item is-active"></span>
                             <span class="product-sidebar__item"></span>
                             <span class="product-sidebar__item"></span>
@@ -96,25 +106,10 @@
                             </div>
 
                             <div class="asset-panel">
-                                <div class="asset-panel__header">
-                                    <strong>Historial reciente</strong>
-                                    <span>Ver trazabilidad</span>
-                                </div>
-                                <div class="timeline-row">
-                                    <span class="timeline-node"></span>
-                                    <div><strong>Mantención preventiva</strong><small>08 sep · Técnico autorizado</small></div>
-                                    <em>Completada</em>
-                                </div>
-                                <div class="timeline-row">
-                                    <span class="timeline-node timeline-node--cyan"></span>
-                                    <div><strong>Certificado actualizado</strong><small>03 sep · Documentación</small></div>
-                                    <em>Registrado</em>
-                                </div>
-                                <div class="timeline-row">
-                                    <span class="timeline-node"></span>
-                                    <div><strong>Solicitud recibida por QR</strong><small>28 ago · Cliente final</small></div>
-                                    <em>Atendida</em>
-                                </div>
+                                <div class="asset-panel__header"><strong>Historial reciente</strong><span>Ver trazabilidad</span></div>
+                                <div class="timeline-row"><span class="timeline-node"></span><div><strong>Mantención preventiva</strong><small>08 sep · Técnico autorizado</small></div><em>Completada</em></div>
+                                <div class="timeline-row"><span class="timeline-node timeline-node--cyan"></span><div><strong>Certificado actualizado</strong><small>03 sep · Documentación</small></div><em>Registrado</em></div>
+                                <div class="timeline-row"><span class="timeline-node"></span><div><strong>Solicitud recibida por QR</strong><small>28 ago · Cliente final</small></div><em>Atendida</em></div>
                             </div>
 
                             <div class="asset-window__footer">
@@ -142,10 +137,7 @@
                         <div class="fragment-node fragment-node--mail"><strong>Correos</strong><span>Solicitudes y acuerdos</span></div>
                         <div class="fragment-node fragment-node--files"><strong>Carpetas</strong><span>Certificados y respaldos</span></div>
                         <div class="fragment-node fragment-node--people"><strong>Personas</strong><span>Lo que realmente ocurrió</span></div>
-                        <div class="fragment-core">
-                            <span>ACTIVO</span>
-                            <strong>¿Cuál es su estado real?</strong>
-                        </div>
+                        <div class="fragment-core"><span>ACTIVO</span><strong>¿Cuál es su estado real?</strong></div>
                     </div>
 
                     <div class="problem-copy">
@@ -153,10 +145,7 @@
                         <h3>El conocimiento queda en las personas, no en la organización.</h3>
                         <p>La empresa no sabe con certeza qué se hizo, cuándo ocurrió, quién intervino, qué vence, qué evidencia existe o cuánto esfuerzo se ha invertido en cada equipo.</p>
                         <p>Cuando cambia el técnico, el administrativo o el proveedor, una parte de esa historia desaparece con él.</p>
-                        <div class="callout">
-                            <strong>El problema no es que falte información.</strong>
-                            <span>El problema es no tenerla disponible cuando hay que decidir.</span>
-                        </div>
+                        <div class="callout"><strong>El problema no es que falte información.</strong><span>El problema es no tenerla disponible cuando hay que decidir.</span></div>
                     </div>
                 </div>
             </div>
@@ -165,10 +154,7 @@
         <section class="section section-dark" id="impacto">
             <div class="container">
                 <div class="section-heading section-heading--split section-heading--inverse">
-                    <div>
-                        <div class="eyebrow eyebrow--light"><span class="eyebrow-dot"></span> Impacto operacional</div>
-                        <h2>No saber qué está pasando con un activo tiene un costo.</h2>
-                    </div>
+                    <div><div class="eyebrow eyebrow--light"><span class="eyebrow-dot"></span> Impacto operacional</div><h2>No saber qué está pasando con un activo tiene un costo.</h2></div>
                     <p>No son pérdidas técnicas. Son pérdidas provocadas por información que existía, pero no estaba disponible a tiempo.</p>
                 </div>
 
@@ -190,7 +176,6 @@
                     <div class="eyebrow"><span class="eyebrow-dot"></span> El producto</div>
                     <h2>Una identidad digital para cada activo.</h2>
                     <p class="lead-copy">EnlacePro asigna a cada activo una identidad permanente y concentra alrededor de ella toda la información necesaria para operarlo, mantenerlo y justificar lo que ha ocurrido.</p>
-
                     <div class="identity-list">
                         <div><i></i><span><strong>Quién es.</strong> Identificador, código interno, tipo, estado y características.</span></div>
                         <div><i></i><span><strong>Quién responde por él.</strong> Propietario, empresa gestora y responsables.</span></div>
@@ -198,7 +183,6 @@
                         <div><i></i><span><strong>Qué le ha ocurrido.</strong> Intervenciones, solicitudes, cambios y eventos.</span></div>
                     </div>
                 </div>
-
                 <figure class="generic-image-card">
                     <img src="https://placehold.co/960x680/F0FAFD/0A2037?text=Activo+identificado+con+QR" alt="Imagen genérica de un activo identificado mediante QR">
                     <figcaption><span class="eyebrow-dot"></span> Imagen referencial · reemplazar por fotografía de producto</figcaption>
@@ -213,7 +197,6 @@
                     <h2>Del QR a una historia operacional completa.</h2>
                     <p>No necesitas sensorizar cada equipo. EnlacePro organiza la capa de identidad, información, evidencia y trazabilidad que hoy está dispersa.</p>
                 </div>
-
                 <div class="process-flow">
                     <article class="process-step"><span class="process-number">01</span><div class="process-icon">A</div><h3>Registra el activo</h3><p>Crea su ficha, asigna responsable, propietario, tipo y datos operacionales.</p></article>
                     <i aria-hidden="true">→</i>
@@ -231,13 +214,9 @@
         <section class="section capabilities">
             <div class="container">
                 <div class="section-heading section-heading--split">
-                    <div>
-                        <div class="eyebrow"><span class="eyebrow-dot"></span> Capacidades V1.0</div>
-                        <h2>Todo lo importante alrededor del activo, conectado.</h2>
-                    </div>
+                    <div><div class="eyebrow"><span class="eyebrow-dot"></span> Capacidades V1.0</div><h2>Todo lo importante alrededor del activo, conectado.</h2></div>
                     <p>La primera versión de EnlacePro está concentrada en resolver control, continuidad y trazabilidad sin agregar complejidad innecesaria.</p>
                 </div>
-
                 <div class="feature-grid">
                     <article class="feature-card"><span class="feature-kicker">IDENTIFICAR</span><h3>QR e identidad permanente</h3><p>Cada activo dispone de un código único que permanece vinculado a su historia a lo largo del tiempo.</p><span class="feature-link">Activo físico → identidad digital</span></article>
                     <article class="feature-card"><span class="feature-kicker">CONTROLAR</span><h3>Propiedad, gestión y estado</h3><p>Registra quién es propietario, quién lo gestiona, quién responde y cuál es su situación operacional.</p><span class="feature-link">Responsabilidad visible</span></article>
@@ -257,7 +236,6 @@
                     <div class="owner-card owner-card--destination"><span>Nuevo propietario</span><strong>Constructora Norte SpA</strong><small>Recibe el activo</small></div>
                     <div class="history-line"><span></span><strong>La historia continúa</strong><span></span></div>
                 </div>
-
                 <div class="ownership__copy">
                     <span class="section-index">03</span>
                     <div class="eyebrow"><span class="eyebrow-dot"></span> Continuidad del activo</div>
@@ -282,13 +260,12 @@
                         <div><i></i><span>Registro de interacción para mantener contexto.</span></div>
                     </div>
                 </div>
-
                 <div class="public-preview">
                     <div class="phone-frame">
                         <div class="phone-bar"><span></span><strong>enlacepro.cl/v/ENP-00086</strong></div>
                         <div class="phone-body">
                             <span class="public-label">ACTIVO VERIFICADO</span>
-                            <div class="public-icon">EP</div>
+                            <div class="public-icon"><img src="assets/brand/enlacepro-icon-color.svg" alt="EnlacePro"></div>
                             <h3>Generador Industrial 250 kVA</h3>
                             <span class="status status-success"><i></i> Operativo</span>
                             <dl>
@@ -310,36 +287,17 @@
                     <h2>Si respondes por activos, necesitas conocer su historia.</h2>
                     <p>Tres operaciones distintas comparten el mismo problema: el activo tiene historia y nadie la tiene completa.</p>
                 </div>
-
                 <div class="persona-grid">
-                    <article class="persona-card">
-                        <span class="persona-number">01</span>
-                        <div class="persona-image"><img src="https://placehold.co/720x440/F3F4F6/0A2037?text=Planta+%C2%B7+Flota+%C2%B7+Maquinaria" alt="Imagen genérica de planta, flota o maquinaria"></div>
-                        <div class="persona-card__body"><span class="persona-role">DUEÑO DE ACTIVOS</span><h3>Controla equipos propios.</h3><p>Necesita saber qué se le hizo a cada máquina, cuándo ocurrió, quién fue responsable y qué evidencia existe.</p><strong>Busca control operacional y mejores decisiones.</strong></div>
-                    </article>
-                    <article class="persona-card persona-card--accent">
-                        <span class="persona-number">02</span>
-                        <div class="persona-image"><img src="https://placehold.co/720x440/F0FAFD/0A2037?text=Venta+%2B+Mantenci%C3%B3n" alt="Imagen genérica de empresa que vende y mantiene equipos"></div>
-                        <div class="persona-card__body"><span class="persona-role">VENDEDOR QUE MANTIENE</span><h3>Controla su base instalada.</h3><p>El equipo está en casa del cliente, pero la relación comercial y técnica continúa durante años.</p><strong>Busca continuidad de servicio e ingresos recurrentes.</strong></div>
-                    </article>
-                    <article class="persona-card">
-                        <span class="persona-number">03</span>
-                        <div class="persona-image"><img src="https://placehold.co/720x440/F3F4F6/0A2037?text=Servicio+t%C3%A9cnico" alt="Imagen genérica de servicio técnico en terreno"></div>
-                        <div class="persona-card__body"><span class="persona-role">PRESTADOR TÉCNICO</span><h3>Responde por equipos ajenos.</h3><p>No es dueño del activo, pero necesita demostrar exactamente qué hizo, cuándo y bajo qué contexto.</p><strong>Busca evidencia y trazabilidad independiente del técnico.</strong></div>
-                    </article>
+                    <article class="persona-card"><span class="persona-number">01</span><div class="persona-image"><img src="https://placehold.co/720x440/F3F4F6/0A2037?text=Planta+%C2%B7+Flota+%C2%B7+Maquinaria" alt="Imagen genérica de planta, flota o maquinaria"></div><div class="persona-card__body"><span class="persona-role">DUEÑO DE ACTIVOS</span><h3>Controla equipos propios.</h3><p>Necesita saber qué se le hizo a cada máquina, cuándo ocurrió, quién fue responsable y qué evidencia existe.</p><strong>Busca control operacional y mejores decisiones.</strong></div></article>
+                    <article class="persona-card persona-card--accent"><span class="persona-number">02</span><div class="persona-image"><img src="https://placehold.co/720x440/F0FAFD/0A2037?text=Venta+%2B+Mantenci%C3%B3n" alt="Imagen genérica de empresa que vende y mantiene equipos"></div><div class="persona-card__body"><span class="persona-role">VENDEDOR QUE MANTIENE</span><h3>Controla su base instalada.</h3><p>El equipo está en casa del cliente, pero la relación comercial y técnica continúa durante años.</p><strong>Busca continuidad de servicio e ingresos recurrentes.</strong></div></article>
+                    <article class="persona-card"><span class="persona-number">03</span><div class="persona-image"><img src="https://placehold.co/720x440/F3F4F6/0A2037?text=Servicio+t%C3%A9cnico" alt="Imagen genérica de servicio técnico en terreno"></div><div class="persona-card__body"><span class="persona-role">PRESTADOR TÉCNICO</span><h3>Responde por equipos ajenos.</h3><p>No es dueño del activo, pero necesita demostrar exactamente qué hizo, cuándo y bajo qué contexto.</p><strong>Busca evidencia y trazabilidad independiente del técnico.</strong></div></article>
                 </div>
             </div>
         </section>
 
         <section class="section section-soft" id="beneficios">
             <div class="container benefits__grid">
-                <div class="benefits__copy">
-                    <span class="section-index">04</span>
-                    <div class="eyebrow"><span class="eyebrow-dot"></span> Resultado</div>
-                    <h2>Menos memoria. Más control.</h2>
-                    <p>EnlacePro no reemplaza el conocimiento técnico. Evita que ese conocimiento quede atrapado en personas, correos o archivos aislados.</p>
-                </div>
-
+                <div class="benefits__copy"><span class="section-index">04</span><div class="eyebrow"><span class="eyebrow-dot"></span> Resultado</div><h2>Menos memoria. Más control.</h2><p>EnlacePro no reemplaza el conocimiento técnico. Evita que ese conocimiento quede atrapado en personas, correos o archivos aislados.</p></div>
                 <div class="benefit-list">
                     <article><span>01</span><div><h3>Anticipa vencimientos</h3><p>Detecta documentación y fechas relevantes antes de que afecten la operación.</p></div></article>
                     <article><span>02</span><div><h3>Encuentra evidencia</h3><p>Accede a documentos e historial desde la ficha del activo, sin perseguir correos o carpetas.</p></div></article>
@@ -374,17 +332,10 @@
                     <h2>La historia completa de un activo, en una sola vista.</h2>
                     <p>Esta versión utiliza mockups conceptuales. En la siguiente iteración los reemplazaremos por capturas reales del producto.</p>
                 </div>
-
                 <div class="showcase-grid">
-                    <article class="showcase-card showcase-card--large">
-                        <div class="showcase-placeholder"><span>01</span><strong>Ficha de activo</strong><small>Estado, propietario, responsable, documentación, identificador e historial.</small></div>
-                    </article>
-                    <article class="showcase-card">
-                        <div class="showcase-placeholder showcase-placeholder--cyan"><span>02</span><strong>Documentos y alertas</strong><small>Vigencias, certificados y próximas fechas críticas.</small></div>
-                    </article>
-                    <article class="showcase-card">
-                        <div class="showcase-placeholder"><span>03</span><strong>Historial de eventos</strong><small>Intervenciones, solicitudes y cambios ordenados cronológicamente.</small></div>
-                    </article>
+                    <article class="showcase-card showcase-card--large"><div class="showcase-placeholder"><span>01</span><strong>Ficha de activo</strong><small>Estado, propietario, responsable, documentación, identificador e historial.</small></div></article>
+                    <article class="showcase-card"><div class="showcase-placeholder showcase-placeholder--cyan"><span>02</span><strong>Documentos y alertas</strong><small>Vigencias, certificados y próximas fechas críticas.</small></div></article>
+                    <article class="showcase-card"><div class="showcase-placeholder"><span>03</span><strong>Historial de eventos</strong><small>Intervenciones, solicitudes y cambios ordenados cronológicamente.</small></div></article>
                 </div>
             </div>
         </section>
@@ -397,7 +348,6 @@
                     <p>La V1.0 está deliberadamente enfocada en identificación, documentación, trazabilidad e interacción alrededor de activos físicos.</p>
                     <a class="btn btn-secondary" href="#demo">Tengo otra pregunta</a>
                 </div>
-
                 <div class="faq-list">
                     <details open><summary>¿Necesito instalar sensores en mis equipos?<span>+</span></summary><p>No. EnlacePro no depende de IoT ni de telemetría. El activo se identifica mediante QR y su información operacional se gestiona dentro de la plataforma.</p></details>
                     <details><summary>¿Qué pasa si vendo o transfiero un activo?<span>+</span></summary><p>Puedes registrar el cambio de propietario sin perder la historia del activo. La empresa que lo gestiona puede mantener la relación operacional cuando corresponda.</p></details>
@@ -415,23 +365,12 @@
                     <div class="eyebrow eyebrow--light"><span class="eyebrow-dot"></span> Solicita una demostración</div>
                     <h2>¿Cuántos activos dependen hoy de una planilla?</h2>
                     <p>Muéstranos cómo administras actualmente tus activos y revisemos si EnlacePro puede ayudarte a mantenerlos identificados, documentados y trazables.</p>
-                    <div class="contact-points">
-                        <span><i></i> Conversación enfocada en tu operación</span>
-                        <span><i></i> Sin compromiso</span>
-                        <span><i></i> Evaluación de encaje</span>
-                    </div>
+                    <div class="contact-points"><span><i></i> Conversación enfocada en tu operación</span><span><i></i> Sin compromiso</span><span><i></i> Evaluación de encaje</span></div>
                 </div>
-
                 <form class="lead-form" action="#" method="post">
-                    <div class="form-row">
-                        <label>Nombre y apellido<input type="text" name="name" placeholder="Tu nombre" required></label>
-                        <label>Empresa<input type="text" name="company" placeholder="Nombre de empresa" required></label>
-                    </div>
+                    <div class="form-row"><label>Nombre y apellido<input type="text" name="name" placeholder="Tu nombre" required></label><label>Empresa<input type="text" name="company" placeholder="Nombre de empresa" required></label></div>
                     <label>Correo corporativo<input type="email" name="email" placeholder="nombre@empresa.cl" required></label>
-                    <div class="form-row">
-                        <label>Teléfono <span>Opcional</span><input type="tel" name="phone" placeholder="+56 9 ..."></label>
-                        <label>Cantidad aproximada de activos<select name="assets" required><option value="">Seleccionar</option><option>Menos de 50</option><option>50–100</option><option>101–250</option><option>251–500</option><option>501–1.000</option><option>Más de 1.000</option></select></label>
-                    </div>
+                    <div class="form-row"><label>Teléfono <span>Opcional</span><input type="tel" name="phone" placeholder="+56 9 ..."></label><label>Cantidad aproximada de activos<select name="assets" required><option value="">Seleccionar</option><option>Menos de 50</option><option>50–100</option><option>101–250</option><option>251–500</option><option>501–1.000</option><option>Más de 1.000</option></select></label></div>
                     <label>¿Qué necesitas controlar?<textarea name="message" rows="4" placeholder="Cuéntanos brevemente cómo gestionan hoy sus activos..."></textarea></label>
                     <button class="btn btn-accent btn-block" type="submit">Solicitar demo</button>
                     <small>Al enviar tus datos aceptas ser contactado por EnlacePro respecto de esta solicitud.</small>
@@ -443,15 +382,8 @@
     <footer class="site-footer">
         <div class="container site-footer__top">
             <div>
-                <a class="brand brand--inverse" href="#inicio" aria-label="EnlacePro">
-                    <span class="brand-mark" aria-hidden="true">
-                        <span class="brand-mark__line brand-mark__line--top"></span>
-                        <span class="brand-mark__line brand-mark__line--bottom"></span>
-                        <span class="brand-mark__node brand-mark__node--left"></span>
-                        <span class="brand-mark__node brand-mark__node--top"></span>
-                        <span class="brand-mark__node brand-mark__node--bottom"></span>
-                    </span>
-                    <span class="brand-copy"><strong>EnlacePro</strong><small>Operación · Trazabilidad · Inteligencia</small></span>
+                <a class="brand" href="#inicio" aria-label="EnlacePro">
+                    <img class="brand-logo brand-logo--footer" src="assets/brand/enlacepro-logo-white.svg" alt="EnlacePro · Cada activo, bajo control">
                 </a>
                 <p>Identidad, documentación y trazabilidad para activos físicos.</p>
             </div>
@@ -459,7 +391,7 @@
             <div class="footer-links"><strong>Empresa</strong><a href="#demo">Solicitar demo</a><a href="#preguntas">Preguntas frecuentes</a><a href="#">Ingresar</a></div>
             <div class="footer-links"><strong>Legal</strong><a href="#">Privacidad</a><a href="#">Términos de uso</a><a href="mailto:contacto@enlacepro.cl">contacto@enlacepro.cl</a></div>
         </div>
-        <div class="container site-footer__bottom"><span>© 2026 EnlacePro. Todos los derechos reservados.</span><span>Operación · Trazabilidad · Inteligencia</span></div>
+        <div class="container site-footer__bottom"><span>© 2026 EnlacePro. Todos los derechos reservados.</span><span>Cada activo, bajo control.</span></div>
     </footer>
 </body>
 </html>
