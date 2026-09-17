@@ -99,7 +99,10 @@
 }
 
 @media (max-width: 760px) {
-    .generic-image-card::before { inset-bottom: 42px; background-position: 28% 58%; }
+    .generic-image-card::before {
+        inset: 0 0 42px;
+        background-position: 28% 58%;
+    }
     .persona-card:nth-child(2) .persona-image::before { background-position: 34% 52%; }
     .persona-card:nth-child(3) .persona-image::before { background-position: 64% 46%; }
 }
