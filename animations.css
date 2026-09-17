@@ -69,7 +69,7 @@
     .plan-card,
     .migration-step {
         transition:
-            transform var(--motion-fast) ease,
+            translate var(--motion-fast) ease,
             box-shadow var(--motion-fast) ease,
             border-color var(--motion-fast) ease;
     }
@@ -80,7 +80,7 @@
     .security-card:hover,
     .benefit-list article:hover,
     .plan-card:hover {
-        transform: translateY(-3px);
+        translate: 0 -3px;
         box-shadow: 0 16px 36px rgba(7, 41, 94, .10);
     }
 
@@ -162,5 +162,6 @@
     .motion-enabled .reveal-item {
         opacity: 1 !important;
         transform: none !important;
+        translate: none !important;
     }
 }
