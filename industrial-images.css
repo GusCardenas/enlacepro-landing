@@ -1,0 +1,105 @@
+/* Industrial imagery overrides for the EnlacePro landing.
+   Reference image supplied by the project owner: open-pit mining operation with haul truck. */
+
+:root {
+    --industrial-reference: url("https://www.cochilco.cl/web/wp-content/uploads/2025/03/46599128875_6af6d237ec_o-2048x1365.jpg");
+}
+
+.generic-image-card {
+    position: relative;
+    isolation: isolate;
+    background: #dce3ea;
+}
+.generic-image-card::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    inset: 0 0 42px;
+    background-image: linear-gradient(180deg, rgba(7,41,94,.02), rgba(7,41,94,.14)), var(--industrial-reference);
+    background-size: cover;
+    background-position: 36% 58%;
+    filter: saturate(.82) contrast(1.03);
+}
+.generic-image-card > img {
+    position: relative;
+    z-index: 0;
+    opacity: 0;
+}
+.generic-image-card figcaption {
+    position: relative;
+    z-index: 2;
+    min-height: 42px;
+    background: rgba(255,255,255,.98);
+    font-size: 0;
+}
+.generic-image-card figcaption::after {
+    content: "Activo físico · operación en terreno";
+    color: var(--neutral-500);
+    font-size: 10px;
+}
+
+.persona-image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    background: #dce3ea;
+}
+.persona-image::before,
+.persona-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+.persona-image::before {
+    background-image: var(--industrial-reference);
+    background-size: cover;
+    filter: saturate(.78) contrast(1.04);
+    transition: transform .35s ease, filter .35s ease;
+}
+.persona-image::after {
+    background: linear-gradient(180deg, rgba(7,41,94,0) 45%, rgba(7,41,94,.24) 100%);
+}
+.persona-image img {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.persona-card:nth-child(1) .persona-image::before {
+    background-position: 18% 64%;
+}
+.persona-card:nth-child(2) .persona-image::before {
+    background-position: 42% 48%;
+    transform: scale(1.08);
+}
+.persona-card:nth-child(3) .persona-image::before {
+    background-position: 70% 44%;
+    transform: scale(1.12);
+}
+.persona-card:hover .persona-image::before {
+    transform: scale(1.06);
+    filter: saturate(.9) contrast(1.06);
+}
+.persona-card:nth-child(2):hover .persona-image::before { transform: scale(1.13); }
+.persona-card:nth-child(3):hover .persona-image::before { transform: scale(1.17); }
+
+.identity {
+    position: relative;
+    overflow: hidden;
+}
+.identity::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 440px;
+    height: 440px;
+    right: -190px;
+    top: 70px;
+    border-radius: 50%;
+    background: rgba(0,184,240,.045);
+}
+
+@media (max-width: 760px) {
+    .generic-image-card::before { inset-bottom: 42px; background-position: 28% 58%; }
+    .persona-card:nth-child(2) .persona-image::before { background-position: 34% 52%; }
+    .persona-card:nth-child(3) .persona-image::before { background-position: 64% 46%; }
+}
