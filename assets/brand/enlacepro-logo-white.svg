@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 300" role="img" aria-labelledby="title desc">
   <title id="title">EnlacePro</title>
-  <desc id="desc">Cada activo, bajo control</desc>
+  <desc id="desc">Cada activo bajo control</desc>
   <g transform="translate(12 7)">
     <path d="M145 16 L45 76 L45 196 L128 246" fill="none" stroke="#FFFFFF" stroke-width="30" stroke-linejoin="miter" stroke-linecap="butt"/>
     <path d="M177 16 L277 76 L277 196 L194 246" fill="none" stroke="#FFFFFF" stroke-width="30" stroke-linejoin="miter" stroke-linecap="butt"/>
@@ -8,5 +8,5 @@
     <rect x="147" y="195" width="28" height="79" fill="#00B8F0"/>
   </g>
   <text x="330" y="164" fill="#FFFFFF" font-family="Manrope, Arial, sans-serif" font-size="112" font-weight="500" letter-spacing="-5">Enlace<tspan font-weight="800">Pro</tspan></text>
-  <text x="336" y="226" fill="#00B8F0" font-family="Manrope, Arial, sans-serif" font-size="47" font-weight="700" letter-spacing="-1.4">Cada activo, bajo control</text>
+  <text x="336" y="226" fill="#00B8F0" font-family="Manrope, Arial, sans-serif" font-size="47" font-weight="700" letter-spacing="-1.4">Cada activo bajo control</text>
 </svg>
