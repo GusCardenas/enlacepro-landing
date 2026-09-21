@@ -33,26 +33,8 @@
         companyFooter.appendChild(linkedin);
     }
 
-    const chapters = [
-        { selector: '#problema .section-heading', number: '01', label: 'El problema' },
-        { selector: '#como-funciona .section-heading', number: '02', label: 'Cómo funciona' },
-        { selector: '.qr-section .qr-section__copy', number: '03', label: 'El diferencial' },
-        { selector: '#planes .plans-intro', number: '04', label: 'Planes' }
-    ];
-
     document.querySelectorAll('.section-index').forEach((index) => {
         index.setAttribute('aria-hidden', 'true');
-    });
-
-    chapters.forEach(({ selector, number, label }) => {
-        const target = document.querySelector(selector);
-        if (!target || target.querySelector(':scope > .chapter-marker')) return;
-
-        const marker = document.createElement('div');
-        marker.className = 'chapter-marker';
-        marker.setAttribute('aria-label', `Capítulo ${number}: ${label}`);
-        marker.innerHTML = `<span class="chapter-marker__number">${number}</span>`;
-        target.prepend(marker);
     });
 
     const securityCards = document.querySelector('#seguridad .security-cards');
