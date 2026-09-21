@@ -28,7 +28,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="styles.css?v=20260921-3">
+    <link rel="stylesheet" href="styles.css?v=20260921-6">
     <script src="ux-enhancements.js?v=20260921-5" defer></script>
 
     <style>
@@ -291,26 +291,84 @@
             <div class="container">
                 <div class="plans-intro">
                     <div class="eyebrow"><span class="eyebrow-dot"></span> Planes</div>
-                    <h2>Dos escalas de operación. El mismo núcleo de control.</h2>
-                    <p>Estamos definiendo el precio comercial. Por ahora, los planes se distinguen principalmente por el volumen y el tipo de operación, no por esconder capacidades esenciales detrás de niveles artificiales.</p>
+                    <h2>Elige por escala. No por funcionalidades escondidas.</h2>
+                    <p>Todos los planes incluyen las capacidades principales de EnlacePro. La diferencia está en el volumen de activos y en el nivel de configuración que requiere tu operación.</p>
                 </div>
-                <div class="plan-grid">
-                    <article class="plan-card">
-                        <span class="plan-badge">Precio por definir</span><h3>Operación</h3>
-                        <p class="plan-card__fit">Si eres pyme y quieres dejar atrás el control disperso en planillas, correos y carpetas, este es tu plan.</p>
-                        <div class="plan-volume"><strong>50–250 activos</strong><span>Rango inicial referencial</span></div>
-                        <ul class="plan-list"><li>Importación inicial desde CSV/XLSX</li><li>Identidad permanente y QR por activo</li><li>Propiedad, responsables y estado operacional</li><li>Documentos, certificados y vencimientos</li><li>Alertas, intervenciones e historial</li><li>Consulta pública controlada y solicitudes</li></ul>
-                        <a class="btn btn-secondary btn-block" href="#demo">Quiero conocer este plan</a>
+
+                <div class="pricing-grid">
+                    <article class="pricing-card pricing-card--operation">
+                        <div class="pricing-card__head">
+                            <div class="pricing-card__title">
+                                <span class="pricing-card__kicker">Plan</span>
+                                <h3>Operación</h3>
+                            </div>
+                            <div class="pricing-card__price">
+                                <div class="pricing-price"><strong>3 UF</strong><span>/ mes</span></div>
+                                <span class="pricing-tax">+ IVA</span>
+                            </div>
+                            <div class="pricing-promo">
+                                <span>Promoción lanzamiento</span>
+                                <strong>2 UF / mes</strong>
+                                <small>octubre, noviembre y diciembre 2026</small>
+                            </div>
+                            <div class="pricing-volume"><strong>Hasta 300 activos</strong></div>
+                        </div>
+                        <a class="btn btn-primary btn-block pricing-card__cta" href="#demo">Solicitar demo</a>
+                        <div class="pricing-card__body">
+                            <p>Centraliza activos, responsables, documentación, vencimientos, solicitudes e historial operacional.</p>
+                        </div>
                     </article>
-                    <article class="plan-card plan-card--featured">
-                        <span class="plan-badge">Precio por definir</span><h3>Escala</h3>
-                        <p class="plan-card__fit">Si tienes una base instalada más grande, con activos propios y de terceros que necesitas mantener en el tiempo, este es tu plan.</p>
-                        <div class="plan-volume"><strong>251–1.000 activos</strong><span>Rango inicial referencial</span></div>
-                        <ul class="plan-list"><li>Todas las capacidades del plan Operación</li><li>Gestión de activos propios y de terceros</li><li>Transferencia de propiedad preservando historial</li><li>Control de una base instalada de mayor volumen</li><li>Consulta e interacción por QR a escala operacional</li></ul>
-                        <a class="btn btn-primary btn-block" href="#demo">Quiero conocer este plan</a>
+
+                    <article class="pricing-card pricing-card--featured">
+                        <div class="pricing-card__head">
+                            <div class="pricing-card__title">
+                                <span class="pricing-card__kicker">Plan</span>
+                                <h3>Escala</h3>
+                            </div>
+                            <div class="pricing-card__price">
+                                <div class="pricing-price"><strong>8 UF</strong><span>/ mes</span></div>
+                                <span class="pricing-tax">+ IVA</span>
+                            </div>
+                            <div class="pricing-volume"><strong>Hasta 1.000 activos</strong></div>
+                        </div>
+                        <a class="btn btn-primary btn-block pricing-card__cta" href="#demo">Solicitar demo</a>
+                        <div class="pricing-card__body">
+                            <p>Para organizaciones con una base instalada mayor, activos propios o de terceros y operaciones de mayor volumen.</p>
+                        </div>
+                    </article>
+
+                    <article class="pricing-card pricing-card--dedicated">
+                        <div class="pricing-card__head">
+                            <div class="pricing-card__title">
+                                <span class="pricing-card__kicker">Solución</span>
+                                <h3>EnlacePro Dedicado</h3>
+                            </div>
+                            <div class="pricing-card__price pricing-card__price--custom">
+                                <div class="pricing-price"><strong>A medida</strong></div>
+                            </div>
+                            <div class="pricing-volume"><strong>Infraestructura y configuración propia</strong></div>
+                        </div>
+                        <a class="btn btn-secondary btn-block pricing-card__cta" href="#demo">Cotizar solución</a>
+                        <div class="pricing-card__body">
+                            <p>Una solución independiente para organizaciones que requieren subdominio propio, integraciones o configuración particular.</p>
+                        </div>
                     </article>
                 </div>
-                <p class="plans-footnote">Ambos planes incluyen la carga inicial de tus activos desde CSV/XLSX, usuarios y documentos sin límite. Los rangos son una referencia inicial mientras cerramos el modelo comercial. No se muestran precios hasta que la estructura definitiva esté validada.</p>
+
+                <div class="pricing-notes" aria-label="Condiciones generales de los planes">
+                    <div class="pricing-note">
+                        <span class="pricing-note__icon" aria-hidden="true">✓</span>
+                        <strong>Usuarios ilimitados. Todas las capacidades principales de EnlacePro incluidas.</strong>
+                    </div>
+                    <div class="pricing-note">
+                        <span class="pricing-note__icon" aria-hidden="true">%</span>
+                        <strong>10% de descuento con pago anual anticipado.</strong>
+                    </div>
+                    <div class="pricing-note pricing-note--migration">
+                        <span class="pricing-note__icon" aria-hidden="true">↗</span>
+                        <span>Implementación asistida y migración de datos disponible desde <strong>4 UF + IVA</strong>.</span>
+                    </div>
+                </div>
             </div>
         </section>
 
