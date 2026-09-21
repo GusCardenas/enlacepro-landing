@@ -28,7 +28,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="styles.css?v=20260921-6">
+    <link rel="stylesheet" href="styles.css?v=20260921-7">
     <script src="ux-enhancements.js?v=20260921-5" defer></script>
 
     <style>
@@ -302,17 +302,18 @@
                                 <span class="pricing-card__kicker">Plan</span>
                                 <h3>Operación</h3>
                             </div>
-                            <div class="pricing-card__price">
-                                <div class="pricing-price"><strong>3 UF</strong><span>/ mes</span></div>
+                            <div class="pricing-card__price pricing-card__price--promo">
+                                <div class="pricing-price pricing-price--regular"><strong>3 UF</strong><span>/ mes</span></div>
+                                <span class="pricing-price__arrow" aria-hidden="true">→</span>
+                                <div class="pricing-price pricing-price--offer"><strong>2 UF</strong><span>/ mes</span></div>
                             </div>
                             <div class="pricing-promo">
                                 <span>Promoción lanzamiento</span>
-                                <strong>2 UF / mes</strong>
                                 <small>octubre, noviembre y diciembre 2026</small>
                             </div>
                             <div class="pricing-volume"><strong>Hasta 300 activos</strong></div>
                         </div>
-                        <a class="btn btn-primary btn-block pricing-card__cta" href="#demo">Solicitar demo</a>
+                        <a class="btn btn-primary btn-block pricing-card__cta" href="#demo">Más información</a>
                         <div class="pricing-card__body">
                             <p>Centraliza activos, responsables, documentación, vencimientos, solicitudes e historial operacional.</p>
                         </div>
@@ -329,7 +330,7 @@
                             </div>
                             <div class="pricing-volume"><strong>Hasta 1.000 activos</strong></div>
                         </div>
-                        <a class="btn btn-primary btn-block pricing-card__cta" href="#demo">Solicitar demo</a>
+                        <a class="btn btn-primary btn-block pricing-card__cta" href="#demo">Más información</a>
                         <div class="pricing-card__body">
                             <p>Para organizaciones con una base instalada mayor, activos propios o de terceros y operaciones de mayor volumen.</p>
                         </div>
@@ -353,18 +354,23 @@
                     </article>
                 </div>
 
-                <div class="pricing-notes" aria-label="Condiciones generales de los planes">
-                    <div class="pricing-note">
-                        <span class="pricing-note__icon" aria-hidden="true">✓</span>
-                        <strong>Usuarios ilimitados. Todas las capacidades principales de EnlacePro incluidas.</strong>
+                <div class="pricing-summary" aria-label="Condiciones generales de los planes">
+                    <div class="pricing-summary__item">
+                        <span class="pricing-summary__icon" aria-hidden="true">✓</span>
+                        <strong>Usuarios ilimitados.</strong>
+                        <span>Todas las capacidades principales de EnlacePro incluidas.</span>
                     </div>
-                    <div class="pricing-note">
-                        <span class="pricing-note__icon" aria-hidden="true">%</span>
-                        <strong>10% de descuento con pago anual anticipado.</strong>
+                    <div class="pricing-summary__divider" aria-hidden="true"></div>
+                    <div class="pricing-summary__item">
+                        <span class="pricing-summary__icon" aria-hidden="true">%</span>
+                        <strong>10% de descuento</strong>
+                        <span>con pago anual anticipado.</span>
                     </div>
-                    <div class="pricing-note pricing-note--migration">
-                        <span class="pricing-note__icon" aria-hidden="true">↗</span>
-                        <span>Implementación asistida y migración de datos disponible desde <strong>4 UF + IVA</strong>.</span>
+                    <div class="pricing-summary__divider" aria-hidden="true"></div>
+                    <div class="pricing-summary__item pricing-summary__item--migration">
+                        <span class="pricing-summary__icon" aria-hidden="true">↗</span>
+                        <strong>Implementación asistida y migración</strong>
+                        <span>disponible desde <b>4 UF + IVA</b>.</span>
                     </div>
                 </div>
             </div>
