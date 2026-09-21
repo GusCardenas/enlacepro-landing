@@ -101,15 +101,18 @@
                 const formData = new FormData(leadForm);
                 const response = await fetch(leadForm.action, {
                     method: 'POST',
+                    headers: {
+                        'Accept': 'application/json'
+                    },
                     body: formData
                 });
                 const result = await response.json().catch(() => ({}));
 
                 if (response.ok && result.success === true) {
                     leadForm.reset();
-                    setStatus('Listo. Recibimos tu solicitud y te contactaremos a la brevedad.', 'success');
+                    setStatus(result.message || 'Recibimos tu solicitud y te contactaremos a la brevedad.', 'success');
                 } else {
-                    setStatus('No pudimos enviar tu solicitud. Escríbenos directo a contacto@enlacepro.cl.', 'error');
+                    setStatus(result.message || 'No pudimos enviar tu solicitud. Escríbenos directo a contacto@enlacepro.cl.', 'error');
                 }
             } catch (error) {
                 setStatus('No pudimos enviar tu solicitud. Escríbenos directo a contacto@enlacepro.cl.', 'error');
