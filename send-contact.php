@@ -5,7 +5,7 @@ declare(strict_types=1);
 header('Content-Type: application/json; charset=UTF-8');
 header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
 
-function respond(int $status, bool $success, string $message): never
+function respond(int $status, bool $success, string $message): void
 {
     http_response_code($status);
     echo json_encode(
@@ -19,7 +19,11 @@ function field(string $name, int $maxLength): string
 {
     $value = trim((string) ($_POST[$name] ?? ''));
 
-    if (mb_strlen($value, 'UTF-8') > $maxLength) {
+    $length = function_exists('mb_strlen')
+        ? mb_strlen($value, 'UTF-8')
+        : strlen($value);
+
+    if ($length > $maxLength) {
         respond(422, false, 'Uno de los campos supera el largo permitido.');
     }
 
