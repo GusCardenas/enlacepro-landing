@@ -62,10 +62,9 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 $assetLabels = [
-    'under-50' => 'Menos de 50',
-    '50-250' => '50–250 · Plan Operación',
-    '251-1000' => '251–1.000 · Plan Escala',
-    'over-1000' => 'Más de 1.000',
+    'operation' => 'Hasta 300 activos · Plan Operación',
+    'scale' => '301–1.000 activos · Plan Escala',
+    'dedicated' => 'Más de 1.000 activos · EnlacePro Dedicado',
 ];
 
 if (!array_key_exists($assets, $assetLabels)) {
