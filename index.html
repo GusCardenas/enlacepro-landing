@@ -29,7 +29,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles.css?v=20260921-3">
-    <script src="ux-enhancements.js?v=20260921-4" defer></script>
+    <script src="ux-enhancements.js?v=20260921-5" defer></script>
 
     <style>
         .brand { gap: 0; }
@@ -344,11 +344,7 @@
                     <div class="review-offer"><strong>Una conversación útil antes de hablar de compra.</strong><span>Buscamos entender volumen, tipos de activos, documentación, vencimientos e historial antes de mostrarte una solución genérica.</span></div>
                     <div class="contact-points"><span><i></i> Revisión enfocada en tu operación</span><span><i></i> Ideal para 50–1.000 activos</span><span><i></i> Demo contextualizada</span></div>
                 </div>
-                <form class="lead-form" id="lead-form" action="https://api.web3forms.com/submit" method="post" autocomplete="on">
-                    <input type="hidden" name="access_key" value="a6af1ca8-35b2-4d94-939b-261c8099dc70">
-                    <input type="hidden" name="ccemail" value="gabriel@enlacepro.cl; gustavo@enlacepro.cl">
-                    <input type="hidden" name="subject" value="Nueva solicitud de demo — EnlacePro">
-                    <input type="hidden" name="from_name" value="Landing EnlacePro">
+                <form class="lead-form" id="lead-form" action="send-contact.php" method="post" autocomplete="on">
                     <input type="checkbox" name="botcheck" class="lead-form__honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
                     <div class="form-row"><label>Nombre y apellido<input type="text" name="name" autocomplete="name" placeholder="Tu nombre" required></label><label>Empresa<input type="text" name="company" autocomplete="organization" placeholder="Nombre de empresa" required></label></div>
                     <label>Correo corporativo<input type="email" name="email" autocomplete="email" placeholder="nombre@empresa.cl" required></label>
