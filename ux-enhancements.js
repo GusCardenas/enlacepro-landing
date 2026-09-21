@@ -154,7 +154,7 @@
         '.migration-copy',
         '.migration-board',
         '.plans-intro',
-        '.plan-card',
+        '.pricing-card',
         '.faq-copy',
         '.faq-list',
         '.contact-copy',
@@ -167,7 +167,7 @@
     elements.forEach((element) => {
         element.classList.add('reveal-item');
 
-        if (element.matches('.impact-card, .process-step, .persona-card, .feature-card, .operational-outcome, .security-card, .plan-card')) {
+        if (element.matches('.impact-card, .process-step, .persona-card, .feature-card, .operational-outcome, .security-card, .pricing-card')) {
             const parent = element.parentElement;
             if (!groupedParents.has(parent)) groupedParents.set(parent, []);
             groupedParents.get(parent).push(element);
