@@ -167,6 +167,35 @@
     gap: 9px;
     margin-top: 34px;
 }
+.pricing-card__price--promo {
+    align-items: center;
+    gap: 12px;
+}
+.pricing-price--regular strong {
+    color: var(--neutral-400);
+    font-size: 29px;
+    text-decoration: line-through;
+    text-decoration-thickness: 1.5px;
+    text-decoration-color: rgba(71,84,103,.52);
+}
+.pricing-price--regular span {
+    color: var(--neutral-400);
+}
+.pricing-price__arrow {
+    color: var(--brand-cyan-text);
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1;
+}
+.pricing-price--offer strong {
+    color: var(--brand-cyan-text);
+    font-size: 38px;
+}
+.pricing-price--offer span {
+    color: var(--brand-cyan-text);
+    font-weight: 750;
+}
 .pricing-price {
     display: flex;
     align-items: baseline;
@@ -194,35 +223,29 @@
     margin-top: 36px;
 }
 .pricing-promo {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 1px 10px;
-    align-items: baseline;
-    margin-top: 20px;
-    padding: 13px 14px;
-    border: 1px solid rgba(0,184,240,.22);
-    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 14px;
+    padding: 10px 12px;
+    border: 1px solid rgba(0,184,240,.20);
+    border-radius: 10px;
     background: var(--brand-cyan-50);
 }
 .pricing-promo span {
-    grid-column: 1 / -1;
+    flex: 0 0 auto;
     color: var(--brand-cyan-text);
     font-size: 9px;
     font-weight: 800;
-    letter-spacing: .09em;
+    letter-spacing: .08em;
     text-transform: uppercase;
-}
-.pricing-promo strong {
-    color: var(--brand-navy-950);
-    font-family: var(--font-display);
-    font-size: 18px;
-    line-height: 1.2;
 }
 .pricing-promo small {
     color: var(--neutral-500);
     font-size: 10px;
     line-height: 1.35;
 }
+
 .pricing-volume {
     margin-top: auto;
     padding-top: 22px;
@@ -258,46 +281,61 @@
     color: var(--neutral-600);
 }
 
-.pricing-notes {
+.pricing-summary {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-    max-width: 980px;
+    grid-template-columns: minmax(0, 1.25fr) auto minmax(0, .9fr) auto minmax(0, 1.25fr);
+    align-items: center;
+    gap: 22px;
+    max-width: 1040px;
     margin: 48px auto 0;
-    padding-top: 32px;
-    border-top: 1px solid var(--neutral-200);
-}
-.pricing-note {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 17px 18px;
+    padding: 22px 24px;
     border: 1px solid var(--neutral-200);
-    border-radius: 14px;
+    border-radius: 16px;
     background: var(--neutral-50);
-    color: var(--neutral-700);
-    font-size: 14px;
-    line-height: 1.55;
+    box-shadow: var(--shadow-sm);
 }
-.pricing-note--migration {
-    grid-column: 1 / -1;
-    justify-content: center;
-    background: var(--white);
+.pricing-summary__item {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    column-gap: 11px;
+    align-items: center;
+    min-width: 0;
 }
-.pricing-note__icon {
+.pricing-summary__item strong,
+.pricing-summary__item span:not(.pricing-summary__icon) {
+    grid-column: 2;
+}
+.pricing-summary__item strong {
+    color: var(--brand-navy-950);
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.35;
+}
+.pricing-summary__item span:not(.pricing-summary__icon) {
+    margin-top: 2px;
+    color: var(--neutral-600);
+    font-size: 12px;
+    line-height: 1.45;
+}
+.pricing-summary__item b {
+    color: var(--brand-navy-950);
+}
+.pricing-summary__icon {
+    grid-row: 1 / 3;
     display: grid;
     place-items: center;
-    width: 28px;
-    height: 28px;
-    flex: 0 0 28px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     color: var(--brand-navy-950);
     background: var(--brand-cyan-100);
     font-size: 12px;
     font-weight: 800;
 }
-.pricing-note strong {
-    color: var(--brand-navy-950);
+.pricing-summary__divider {
+    width: 1px;
+    height: 48px;
+    background: var(--neutral-200);
 }
 
 /* Hero: una sola acción comercial. El scroll cue no compite con el CTA. */
@@ -389,8 +427,15 @@
     .pricing-card { max-width: 680px; width: 100%; margin-inline: auto; }
     .pricing-card__head { min-height: 0; }
     .pricing-card__title { min-height: 0; }
-    .pricing-notes { grid-template-columns: 1fr; }
-    .pricing-note--migration { grid-column: auto; justify-content: flex-start; }
+    .pricing-summary {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 20px;
+    }
+    .pricing-summary__divider {
+        width: 100%;
+        height: 1px;
+    }
     .security-card { grid-template-columns: 44px 1fr; padding: 21px; }
     .security-card__icon { width: 42px; height: 42px; }
     .security-card h3 { font-size: 20px; }
@@ -403,6 +448,9 @@
     .security-card { grid-template-columns: 1fr; }
     .pricing-card__head { padding: 26px 22px 24px; }
     .pricing-price strong { font-size: 32px; }
+    .pricing-price--regular strong { font-size: 25px; }
+    .pricing-price--offer strong { font-size: 34px; }
+    .pricing-card__price--promo { gap: 9px; }
     .pricing-card--dedicated .pricing-price strong { font-size: 30px; }
     .pricing-card__body { padding-top: 20px; }
     .hero .button-row .btn-accent { width: 100%; }
