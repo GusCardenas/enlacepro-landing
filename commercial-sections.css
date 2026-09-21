@@ -177,6 +177,33 @@
     gap: 9px;
     margin-top: 24px;
 }
+.pricing-price {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+.pricing-price strong {
+    color: var(--brand-navy-950);
+    font-family: var(--font-display);
+    font-size: 42px;
+    font-weight: 800;
+    line-height: .98;
+    letter-spacing: -.055em;
+}
+.pricing-price span {
+    color: var(--neutral-600);
+    font-size: 12px;
+    font-weight: 700;
+}
+.pricing-card--dedicated .pricing-price strong {
+    color: var(--white);
+}
+.pricing-card--dedicated .pricing-price span {
+    color: rgba(255,255,255,.72);
+}
+.pricing-card__price--custom {
+    margin-top: 24px;
+}
 .pricing-launch {
     margin-top: 28px;
 }
