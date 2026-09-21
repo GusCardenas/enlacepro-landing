@@ -105,7 +105,7 @@
                 });
                 const result = await response.json().catch(() => ({}));
 
-                if (response.ok && result.success !== false) {
+                if (response.ok && result.success === true) {
                     leadForm.reset();
                     setStatus('Listo. Recibimos tu solicitud y te contactaremos a la brevedad.', 'success');
                 } else {
