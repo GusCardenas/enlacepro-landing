@@ -163,7 +163,7 @@
     content: "✓";
     position: absolute;
     left: 16px;
-    color: var(--brand-cyan-600);
+    color:var(--brand-cyan-text);
     font-weight: 700;
 }
 
