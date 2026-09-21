@@ -38,7 +38,7 @@
     bottom: -170px;
     width: 430px;
     height: 430px;
-    background: url("assets/brand/enlacepro-icon-white.png") center/contain no-repeat;
+    background: url("../brand/enlacepro-icon-white.png") center/contain no-repeat;
     opacity: .035;
     pointer-events: none;
 }
