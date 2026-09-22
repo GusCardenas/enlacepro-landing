@@ -107,7 +107,53 @@ $sent = mail($to, $encodedSubject, $message, implode("\r\n", $headers));
 
 if (!$sent) {
     error_log('EnlacePro contact form: mail() returned false.');
-    respond(500, false, 'No pudimos enviar tu solicitud. Escríbenos a contacto@enlacepro.cl.');
+    respond(500, false, 'No pudimos enviar tu solicitud. Escríbenos a gustavo@enlacepro.cl.');
+}
+
+$confirmationSubject = 'Recibimos tu solicitud — EnlacePro';
+$confirmationMessage = implode("\r\n", [
+    'Hola, ' . $name . ':',
+    '',
+    'Gracias por tu interés en EnlacePro.',
+    '',
+    'Recibimos correctamente tu solicitud y nos pondremos en contacto contigo para conocer un poco más sobre tu operación y los activos que necesitas gestionar.',
+    '',
+    'La idea es entender primero tu caso y luego mostrarte EnlacePro aplicado a una situación real de tu empresa.',
+    '',
+    'Empresa: ' . $company,
+    'Activos aproximados: ' . $assetLabels[$assets],
+    '',
+    'Si necesitas agregar algún antecedente antes de que te contactemos, puedes responder directamente a este correo.',
+    '',
+    'Saludos,',
+    'Equipo EnlacePro',
+    'Tus activos bajo control',
+    'https://enlacepro.cl',
+    '',
+    'Si no realizaste esta solicitud, puedes ignorar este correo.',
+]);
+
+$confirmationHeaders = [
+    'From: EnlacePro <gustavo@enlacepro.cl>',
+    'Reply-To: gustavo@enlacepro.cl',
+    'MIME-Version: 1.0',
+    'Content-Type: text/plain; charset=UTF-8',
+    'Content-Transfer-Encoding: 8bit',
+];
+
+$encodedConfirmationSubject = function_exists('mb_encode_mimeheader')
+    ? mb_encode_mimeheader($confirmationSubject, 'UTF-8', 'B', "\r\n")
+    : $confirmationSubject;
+
+$confirmationSent = mail(
+    $email,
+    $encodedConfirmationSubject,
+    $confirmationMessage,
+    implode("\r\n", $confirmationHeaders)
+);
+
+if (!$confirmationSent) {
+    error_log('EnlacePro contact form: customer confirmation mail() returned false.');
 }
 
 @file_put_contents($rateLimitFile, (string) $now, LOCK_EX);
